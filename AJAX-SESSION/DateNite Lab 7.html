@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AJAX - POST</title>
+    <meta charset="utf-8"/>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+    <style>
+      @import url(http://fonts.googleapis.com/css?family=Roboto+Condensed);
+      html, body {
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 12pt;
+      }
+
+      input {
+        border: solid 1px;
+        padding: 4px;
+      }
+      input:hover {
+        border: 1px solid #999;
+        color:#000;
+      }
+      input[type="button"]:active, input[type="reset"]:active {
+         border: 1px solid #fa89ad;
+         color:#98a077;
+         background-color: #000000;
+      }
+      /*
+          http://stackoverflow.com/questions/13204002/align-form-elements-in-css
+      */
+      form {
+        width: 400px;
+        margin: 0 auto;
+      }
+
+      label, input {
+        /* in order to define widths */
+        display: inline-block;
+      }
+
+      label {
+        width: 30%;
+        /* positions the label text beside the input */
+        text-align: right;
+      }
+
+      label + input {
+        width: 50%;
+        /* large margin-right to force the next element to the new-line
+           and margin-left to create a gutter between the label and input */
+        margin: 0 10% 0 4%;
+      }
+
+      /* only the submit button is matched by this selector,
+         but to be sure you could use an id or class for that button */
+      input + input {
+        float: right;
+      }
+      .infoMsg {
+        padding: 5px;
+        background-color: green;
+        color: white;
+        width: 50%;
+        text-align: center;
+        margin: 0 auto;
+      }
+      .errorMsg {
+        padding: 5px;
+        background-color: red;
+        color: white;
+        width: 50%;
+        text-align: center;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div id="d1">
+
+      <form id="logoutForm">
+        <fieldset>
+          <legend>Logout Form</legend>
+          <label for="password">Password: </label>
+          <input id="logoutbutton" type="button" value="Logout"/>
+          <input type="hidden" value="logout" name="logoutButton"/>
+        </fieldset>
+      </form>
+
+      <form id="loginForm">
+        <fieldset>
+          <legend>Register</legend>
+          <label for="login">Login: </label>
+          <input id="login" type="text" placeholder="login" name="login" autofocus="autofocus"/><br/><br/>
+
+          <label for="password">Password: </label>
+          <input id="password" type="password" placeholder="password" name="password"/><br/><br/>
+
+          <input id="loginbutton" type="button" value="Login"/>
+          <input type="reset" value="Reset" id="resetLoginForm"/>
+
+        </fieldset>
+      </form>
+      <br/>
+
+      <p id="errorMsg" class="errorMsg"></p>
+      <p id="infoMsg" class="infoMsg"></p>
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function() {
+
+            // by default, don't show the log out form
+            $("#logoutForm").css("display", "none");
+            $("#errorMsg").css("display", "none");
+            $("#infoMsg").css("display", "none");
+            getUserProfileInfo();
+
+
+
+            $("#resetLoginForm").click(function() {
+                 $("#errorMsg").html("");
+                 $("#infoMsg").html("");
+                $("#errorMsg").css("display", "none");
+                $("#infoMsg").css("display", "none");
+            });
+
+            function getUserProfileInfo() {
+
+                $.ajax({
+                    url: "LAB7-AJAX-login-session.php",
+                    type: "GET",
+                    dataType: "JSON",
+                    //data: {}, // could use this to ask for specific pieces of information (e.g., user profile, friends list, etc)
+                    success: function(resultData) {
+                        console.log("Session GET returned: ", resultData);
+
+                        var status = resultData['status'];
+                        if(status == 'success') {
+
+                            var userProfileData = "";
+                            for(var key in resultData) {
+                                if(key != 'status') {
+                                    userProfileData += key + ":" + resultData[key] + " ";
+                                }
+                            }
+                            $("#infoMsg").text(userProfileData);
+                            $("#infoMsg").css("display", "block");
+                            $("#errorMsg").css("display", "none");
+                            $("#logoutForm").css("display", "block");
+                            $("#loginForm").css("display", "none");
+
+                        } else {
+                            $("#logoutForm").css("display", "none");
+                            $("#loginForm").css("display", "block");
+
+                        }
+
+                    },
+                    error: function(jqXHR, textStatus, errorThrown) {
+                        console.log(jqXHR.statusText, textStatus);
+                    }
+                });
+
+            }
+
+
+
+
+            $("#loginbutton").click(function() {
+                //console.log($("#lastName").val());
+                var formData = ConvertFormToJSON("#loginForm");
+                //console.log("Login data to send: ", formData);
+
+                $.ajax({
+                    url: "LAB7-AJAX-login-session.php",
+                    type: "POST",
+                    dataType: "JSON",
+                    data: formData,
+                    success: function(data) {
+                        console.log("Login data returned: ", data);
+
+                        var status = data['status'];
+                        if(status == 'fail') {
+                            $("#errorMsg").html(data['msg']);
+                            $("#errorMsg").css("display", "block");
+                        } else {
+                            // get user data
+                            getUserProfileInfo();
+                            $('#loginForm').trigger("reset");
+
+                        }
+
+                    },
+                    error: function(jqXHR, textStatus, errorThrown) {
+                        //console.log(jqXHR.statusText, textStatus, errorThrown);
+                       //console.log(jqXHR.statusText, textStatus);
+                    }
+                });
+
+                // from: http://www.developerdrive.com/2013/04/turning-a-form-element-into-json-and-submiting-it-via-jquery/
+                function ConvertFormToJSON(form){
+                    var array = $(form).serializeArray();
+                    var json = {};
+
+                    jQuery.each(array, function() {
+                        // don't send 'undefined'
+                        json[this.name] = this.value || '';
+                    });
+                    return json;
+                }
+
+            });
+
+            $("#logoutbutton").click(function() {
+                var sendData = {logout: "true"};
+                console.log("Logout data to send: ", sendData);
+
+                $.ajax({
+                    url: "AJAX-logout-session.php",
+                    type: "POST",
+                    dataType: "JSON",
+                    data: sendData,
+                    success: function(data) {
+                        console.log("Logout data returned: ", data);
+
+                        var status = data['status'];
+                        if(status == 'fail') {
+                            $("#errorMsg").html(data['msg']);
+                            $("#errorMsg").css("display", "block");
+                            $("#infoMsg").html("");
+                            $("#infoMsg").css("display", "none");
+
+                            /* BTW, IF LOGOUT FAILED, IT'S BECAUSE THE SESSION EXPIRED
+                               YOU COULD EASILY JUST RESET THE HTML IN THE PAGE
+                             */
+
+                        } else {
+                            $("#infoMsg").html(data['msg']);
+                            $("#infoMsg").css("display", "block");
+                            $("#errorMsg").html("");
+                            $("#errorMsg").css("display", "none");
+                            $("#logoutForm").css("display", "none");
+                            $("#loginForm").css("display", "block");
+                        }
+
+
+                    },
+                    error: function(jqXHR, textStatus, errorThrown) {
+                        //console.log(jqXHR.statusText, textStatus, errorThrown);
+                        console.log(jqXHR.statusText, textStatus);
+                    }
+                });
+
+                // from: http://www.developerdrive.com/2013/04/turning-a-form-element-into-json-and-submiting-it-via-jquery/
+                function ConvertFormToJSON(form){
+                    var array = $(form).serializeArray();
+                    var json = {};
+
+                    jQuery.each(array, function() {
+                        // don't send 'undefined'
+                        json[this.name] = this.value || '';
+                    });
+                    return json;
+                }
+
+            });
+
+
+        });
+
+    </script>
+
+  </body>
+</html>
