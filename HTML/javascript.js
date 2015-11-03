@@ -4,20 +4,32 @@ window.onload = function () {
     var guestLogin = document.getElementById("splashGuest");
     var buttons = document.getElementById("splashButton");
     
+    var forms = [];
+    
+    
     userSignup.onclick = function () {
+        /*var formInputs = {
+            fName: fName.value,
+            lName: lName.value,
+            uName: uName.value,
+            email: email.value,
+            password: password.value,
+            index: 0
+        }
+        
+        forms.push(formInputs);
+            console.log("it's working!!");
+        */
         var formDiv = document.createElement("div");
         
-            formDiv.style.marginLeft = "150px";
-            formDiv.style.marginRight = "150px";
-            formDiv.style.height = "750px";
-            formDiv.style.width = "auto";
+            formDiv.style.marginLeft = "auto";
+            formDiv.style.marginRight = "auto";
+            formDiv.style.height = "1335px";
+            formDiv.style.width = "755px";
             formDiv.style.position = "absolute";
-            formDiv.style.right = "0";
-            formDiv.style.left = "0";
-            formDiv.style.top = "5%";
             formDiv.style.bottom = "0";
+            formDiv.style.top = "10px";
             formDiv.style.backgroundColor = "#fff";
-            formDiv.style.boxShadow = "0 5px 15px black";
         
              document.body.appendChild(formDiv);
         
