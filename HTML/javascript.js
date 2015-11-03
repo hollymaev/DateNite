@@ -4,6 +4,11 @@ window.onload = function () {
     var guestLogin = document.getElementById("splashGuest");
     var buttons = document.getElementById("splashButton");
     
+    //Guest Login 
+    
+    //User Login 
+    
+    // User Sign Up 
     var forms = [];
     
     
@@ -55,6 +60,48 @@ window.onload = function () {
             subBut.onclick = function () {
                 document.body.removeChild(formDiv);
             }
-               
+      
+    // Options 
+        var options = [];
+        
+    // Side Div
+        var sideDiv = document.getElementById("menu");
+        
+        
+        menu.onclick = function () {
+            var sBar = document.createElement("div");
+            
+            sBar.style.marginLeft = "auto";
+            sBar.style.marginRight = "auto";
+            sBar.style.height = "1335px";
+            sBar.style.width = "755px";
+            sBar.style.position = "absolute";
+            sBar.style.bottom = "0";
+            sBar.style.top = "10px";
+            sBar.style.backgroundColor = "#fff";
+        
+            
+            document.body.appendChild(sBar);
+            
+            var userPlans = document.createElement("div");
+                sBar.appendChild(plans);
+                plans.innerHTML = "Plans";
+            var userSettings = document.createElement("div");   
+                sBar.appendChild(settings);
+                settings.innerHTML = "Settings";
+            var userLogout = document.createElement("div");
+                sBar.appendChild(logout);
+                logout.innerHTML = "Logout";
+        }
+        
+        
+        
+        
+        
+        
+    // Logout 
+            
+            
+            
     };
 };
