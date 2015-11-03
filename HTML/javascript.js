@@ -110,6 +110,7 @@ window.onload = function () {
                 document.body.removeChild(formDiv);
             }
       
+   /*
     // Options 
         var options = [];
         
@@ -155,6 +156,6 @@ window.onload = function () {
     // Logout 
             
             
-            
+    */        
     };
 };
