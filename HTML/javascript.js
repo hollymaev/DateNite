@@ -48,7 +48,13 @@ window.onload = function () {
         var passInput = document.createElement("input");
             formDiv.appendChild(passInput);
         
+        var subBut = document.createElement("button");
+            formDiv.appendChild(subBut);
+            subBut.innerHTML = "SIGN UP";
         
+            subBut.onclick = function () {
+                document.body.removeChild(formDiv);
+            }
                
     };
 };
