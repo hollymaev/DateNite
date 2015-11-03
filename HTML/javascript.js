@@ -39,18 +39,67 @@ window.onload = function () {
              document.body.appendChild(formDiv);
         
         var fnameInput = document.createElement("input");
+            fnameInput.placeholder="First Name";
+            fnameInput.style.width="280px";
+            fnameInput.style.padding="10px";
+            fnameInput.style.marginTop="15px";
+            fnameInput.style.marginRight="40px";
+            fnameInput.style.marginLeft="40px";
+            fnameInput.style.backgroundColor="rgba(0,0,0,0.4)";
+            fnameInput.style.border="solid 2px #fff";
+            fnameInput.style.fontSize="25pt";
             formDiv.appendChild(fnameInput);
         
         var lnameInput = document.createElement("input");
+            lnameInput.placeholder="Last Name";
+            lnameInput.style.display="inline-block";
+            lnameInput.style.width="280px";
+            lnameInput.style.padding="10px";
+            lnameInput.style.marginTop="15px";
+            lnameInput.style.marginRight="40px";
+            lnameInput.style.marginLeft="40px";
+            lnameInput.style.backgroundColor="rgba(0,0,0,0.4)";
+            lnameInput.style.border="solid 2px #fff";
+            lnameInput.style.fontSize="25pt";
             formDiv.appendChild(lnameInput);
         
         var unameInput = document.createElement("input");
+            unameInput.placeholder="Username";
+            unameInput.style.display="inline-block";
+            unameInput.style.width="300px";
+            unameInput.style.padding="10px";
+            unameInput.style.marginTop="15px";
+            unameInput.style.marginRight="40px";
+            unameInput.style.marginLeft="40px";
+            unameInput.style.backgroundColor="rgba(0,0,0,0.4)";
+            unameInput.style.border="solid 2px #fff";
+            unameInput.style.fontSize="25pt";
             formDiv.appendChild(unameInput);
         
         var emailInput = document.createElement("input");
+            emailInput.placeholder="Email";
+            emailInput.style.display="inline-block";
+            emailInput.style.width="300px";
+            emailInput.style.padding="10px";
+            emailInput.style.marginTop="15px";
+            emailInput.style.marginRight="40px";
+            emailInput.style.marginLeft="40px";
+            emailInput.style.backgroundColor="rgba(0,0,0,0.4)";
+            emailInput.style.border="solid 2px #fff";
+            emailInput.style.fontSize="25pt";
             formDiv.appendChild(emailInput);
         
         var passInput = document.createElement("input");
+            passInput.placeholder="Password";
+            passInput.style.display="inline-block";
+            passInput.style.width="300px";
+            passInput.style.padding="10px";
+            passInput.style.marginTop="15px";
+            passInput.style.marginRight="40px";
+            passInput.style.marginLeft="40px";
+            passInput.style.backgroundColor="rgba(0,0,0,0.4)";
+            passInput.style.border="solid 2px #fff";
+            passInput.style.fontSize="25pt";
             formDiv.appendChild(passInput);
         
         var subBut = document.createElement("button");
