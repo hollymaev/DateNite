@@ -83,13 +83,17 @@ window.onload = function () {
             
             document.body.appendChild(sBar);
             
-            var userPlans = document.createElement("div");
+            var userPlans = document.createElement("button");
                 sBar.appendChild(plans);
                 plans.innerHTML = "Plans";
-            var userSettings = document.createElement("div");   
+            
+                
+            var userSettings = document.createElement("button");   
                 sBar.appendChild(settings);
                 settings.innerHTML = "Settings";
-            var userLogout = document.createElement("div");
+            
+            
+            var userLogout = document.createElement("button");
                 sBar.appendChild(logout);
                 logout.innerHTML = "Logout";
         }
