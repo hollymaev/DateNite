@@ -10,7 +10,7 @@ window.onload = function () {
     
     // User Sign Up 
     var forms = [];
-    
+    var img = document.getElementById("img");
     
     userSignup.onclick = function () {
         /*var formInputs = {
@@ -36,8 +36,8 @@ window.onload = function () {
             formDiv.style.top = "5px";
             formDiv.style.backgroundColor = "transparent";
             formDiv.style.border = "solid 7px #3E124D";
+             document.body.appendChild(formDiv); 
         
-             document.body.appendChild(formDiv);
         
         var fnameInput = document.createElement("input");
             fnameInput.placeholder="First Name";
@@ -50,6 +50,8 @@ window.onload = function () {
             fnameInput.style.backgroundColor="rgba(0,0,0,0.4)";
             fnameInput.style.border="solid 2px #fff";
             fnameInput.style.fontSize="25pt";
+            fnameInput.style.textAlign="center";
+            fnameInput.style.color = "#fff";
             formDiv.appendChild(fnameInput);
         
         var lnameInput = document.createElement("input");
@@ -63,6 +65,7 @@ window.onload = function () {
             lnameInput.style.backgroundColor="rgba(0,0,0,0.4)";
             lnameInput.style.border="solid 2px #fff";
             lnameInput.style.fontSize="25pt";
+            lnameInput.style.textAlign="center";
             formDiv.appendChild(lnameInput);
         
         var unameInput = document.createElement("input");
@@ -76,6 +79,8 @@ window.onload = function () {
             unameInput.style.backgroundColor="rgba(0,0,0,0.4)";
             unameInput.style.border="solid 2px #fff";
             unameInput.style.fontSize="25pt";
+            unameInput.style.textAlign="center";
+            unameInput.style.color = "#fff";
             formDiv.appendChild(unameInput);
             
         
@@ -90,6 +95,8 @@ window.onload = function () {
             emailInput.style.backgroundColor="rgba(0,0,0,0.4)";
             emailInput.style.border="solid 2px #fff";
             emailInput.style.fontSize="25pt";
+            emailInput.style.textAlign="center";
+            emailInput.style.color = "#fff";
             formDiv.appendChild(emailInput);
         
         
@@ -104,6 +111,8 @@ window.onload = function () {
             passInput.style.backgroundColor="rgba(0,0,0,0.4)";
             passInput.style.border="solid 2px #fff";
             passInput.style.fontSize="25pt";
+            passInput.style.textAlign="center";
+            passInput.style.color = "#fff";
             formDiv.appendChild(passInput);
         
         
