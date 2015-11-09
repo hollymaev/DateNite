@@ -29,13 +29,12 @@ window.onload = function () {
         
             formDiv.style.marginLeft = "auto";
             formDiv.style.marginRight = "auto";
-            formDiv.style.height = "1335px";
-            formDiv.style.width = "750px";
+            formDiv.style.height = "auto";
+            formDiv.style.width = "auto";
             formDiv.style.position = "absolute";
             formDiv.style.bottom = "0";
             formDiv.style.top = "5px";
             formDiv.style.backgroundColor = "transparent";
-            formDiv.style.border = "solid 7px #3E124D";
              document.body.appendChild(formDiv); 
         
         
