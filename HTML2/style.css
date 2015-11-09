@@ -1,4 +1,3 @@
-html {
 @media only screen 
   and (min-device-width: 414px) 
   and (max-device-width: 736px) 
@@ -6,13 +5,17 @@ html {
   and (orientation: portrait) { 
 
   }
+
+html {
+    height: 100%;
+    width: 100%; 
 }
 
 body {
     margin-left: auto;
     margin-right: auto;
-    height: 1334px;
-    width: 750px; 
+    height: 100%;
+    width: 100%; 
 }
 
 h1{
@@ -107,7 +110,5 @@ h3{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    border: solid 7px #3E124D;
-    height: 1334px;
-    width: 750px; 
+  
 }
