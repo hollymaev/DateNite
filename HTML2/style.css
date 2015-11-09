@@ -1,9 +1,12 @@
+html {
 @media only screen 
   and (min-device-width: 414px) 
   and (max-device-width: 736px) 
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: portrait) { 
 
+  }
+}
 
 body {
     margin-left: auto;
@@ -11,9 +14,6 @@ body {
     height: 1334px;
     width: 750px; 
 }
-      
-      
-  }
 
 h1{
     text-align: center;
