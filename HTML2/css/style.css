@@ -1,6 +1,6 @@
 @media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 736px) 
+  and (min-device-width: 375px) 
+  and (max-device-width: 627px) 
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: portrait) { 
 
@@ -12,8 +12,6 @@ html {
 }
 
 body {
-    margin-left: auto;
-    margin-right: auto;
     height: 100%;
     width: 100%; 
 }
@@ -50,11 +48,11 @@ h3{
 #header {
     width:100%;
     height:200px;
-    background-color: #222729;
+    background-color: #24292E;
 }
 
 #grey {
-    background-color: #222729;
+    background-color: #24292E;
     width:100%;
     height: 975px;
 }
@@ -126,6 +124,34 @@ h3{
     z-index: 5;
 }
 
+.minicircle1 {
+	margin-right:70%;
+    margin-left:30%;
+    margin-bottom: 5%;
+    width: 7px;
+	height: 7px;
+	background: #FF7DEE;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+    z-index: 5;
+    box-shadow: 1px 1px 1px #FFA8F3;
+}
+
+.minicircle2 {
+	margin-right:30%;
+    margin-left:70%;
+    margin-bottom: 5%;
+    width: 7px;
+	height: 7px;
+	background: #5BD9FC;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+    z-index: 5;
+    box-shadow: 1px 1px 1px #9CE9FF;
+}
+
 
 #background {
     background:
@@ -145,9 +171,9 @@ h3{
     width: 100px;
     height: 100px;
     padding: 10px;
-    margin-top: 20px;
-    margin-right:40px;
-    margin-left:40px;
+    margin-top: 30px;
+    margin-right:50%;
+    margin-left:50%;
     margin-bottom: 20px;
     display:inline-block;
     position:relative;
@@ -164,13 +190,15 @@ h3{
 
 
 #time img{
+    margin-right: 70%;
+    margin-left: 30%;
     display:inherit;
-    left:10px;
 }
 
 #budget img{
+    margin-right: 30%;
+    margin-left: 70%;
     display:inherit;
-    right:10px;
 }
 
 .icon {
@@ -198,4 +226,27 @@ h3{
     margin-top:5%;
 }
 
+#grad1 {
+    height: 8px;
+    width:100%;
+    background: -webkit-linear-gradient(right, #683780 , #DE54CC); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(to right, #683780, #DE54CC); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #683780, #DE54CC); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #683780, #DE54CC); /* Standard syntax (must be last) */
+}
 
+#lPic {
+    background:#24292E;
+    box-shadow: 0 2px 4px #CCC;
+    url('');
+    height:200px;
+    width:150px;
+}
+
+#rPic {
+    background:#24292E;
+    box-shadow: 0 2px 4px #CCC;
+    url('');
+    height:200px;
+    width:150px;
+}
