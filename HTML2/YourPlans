@@ -12,7 +12,7 @@
     <LINK HREF = "css/style.css" REL="STYLESHEET">
         <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
         
-        <title>Home</title>
+        <title>Plans</title>
 </HEAD>
 
     <BODY>
@@ -24,7 +24,7 @@
             <br/>
             <br/>
             
-            <h2>SETTINGS</h2>
+            <h2>YOUR PLANS</h2>
             <br/>
             <br/>
             <br/>

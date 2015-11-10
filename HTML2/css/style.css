@@ -18,7 +18,7 @@ body {
 
 h1{
     text-align: center;
-    font-size: 50pt;
+    font-size: 80pt;
     font-family: 'Gill Sans MT', sans-serif;
     font-weight: 200;
     color: #fff;
@@ -33,6 +33,41 @@ h3{
     color:#fff;
     z-index: 5;
 }
+
+h2 {
+    text-align: center;
+    font-size: 50pt;
+    font-family: 'Gill Sans MT', sans-serif;
+    font-weight: 100;
+    color:#fff;
+    z-index: 5;
+}
+
+div {
+    font-size: 14pt;
+    font-family: 'Gill Sans MT', sans-serif;
+    font-weight: 100;
+    color:#fff;
+}
+
+#left{
+    text-align: left;
+    font-size: 30pt;
+    font-family: 'Gill Sans MT', sans-serif;
+    font-weight: 100;
+    color:#fff;
+    z-index: 5;
+}
+
+#right{
+    text-align: right;
+    font-size: 30pt;
+    font-family: 'Gill Sans MT', sans-serif;
+    font-weight: 100;
+    color:#fff;
+    z-index: 5;
+}
+
 
 #logo {
     height:180px;
@@ -239,14 +274,35 @@ h3{
     background:#24292E;
     box-shadow: 0 2px 4px #CCC;
     url('');
+    border: none;
     height:200px;
-    width:150px;
+    width:400px;
 }
 
 #rPic {
     background:#24292E;
     box-shadow: 0 2px 4px #CCC;
     url('');
+    border: none;
     height:200px;
-    width:150px;
+    width:400px;
+}
+
+#arrowicons {
+    display: inline-block;
+    color: #fff;
+}
+
+#menu{
+    color: #fff;
+    z-index: 2;
+}
+
+.boxes {
+    background:#24292E;
+    box-shadow: 0 2px 4px #CCC;
+    url('');
+    border: none;
+    height:200px;
+    width:100%;
 }
