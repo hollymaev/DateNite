@@ -4,9 +4,6 @@ window.onload = function () {
     var guestLogin = document.getElementById("splashGuest");
     var buttons = document.getElementById("splashButton");
     
-    //Guest Login 
-    
-    //User Login 
     
     // User Sign Up 
     var forms = [];

@@ -1,0 +1,201 @@
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+
+  }
+
+html {
+    height: 100%;
+    width: 100%; 
+}
+
+body {
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    width: 100%; 
+}
+
+h1{
+    text-align: center;
+    font-size: 50pt;
+    font-family: 'Gill Sans MT', sans-serif;
+    font-weight: 200;
+    color: #fff;
+    z-index: 5;
+}
+
+h3{
+    text-align: center;
+    font-size: 20pt;
+    font-family: 'Gill Sans MT', sans-serif;
+    font-weight: 100;
+    color:#fff;
+    z-index: 5;
+}
+
+#logo {
+    height:180px;
+    weight:180px;
+    z-index: 5;
+    
+}
+
+#blank {
+    height:375px;
+}
+
+#header {
+    width:100%;
+    height:200px;
+    background-color: #222729;
+}
+
+#grey {
+    background-color: #222729;
+    width:100%;
+    height: 975px;
+}
+
+#box {
+    width: 170px;
+    height: 50px;
+    padding: 15px;
+    display:inline-block;
+    position:relative;
+    left:50px;
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor:pointer;
+    overflow: hidden;
+    color: #fff;
+    font-size: 25pt;
+    text-align: center;
+}
+
+#logo2 {
+    height:140px;
+    weight:140px;
+    z-index: 5;
+    margin-left: 44%;
+    margin-right:44%;
+    margin-top: 25px;
+    
+}
+
+.splashButton {
+    width: 280px;
+    padding: 15px;
+    margin-top: 15px;
+    margin-right:10%;
+    margin-left:10%;
+    display:inline-block;
+    position:relative;
+    top:80%;
+    left:12px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: solid 2px #fff;
+    cursor:pointer;
+    overflow: hidden;
+    color: #fff;
+    font-size: 25pt;
+}
+
+
+#splashSignup {
+    border:none;
+    background-color: transparent;
+    text-decoration: underline;
+    margin-top:2px;
+    margin-bottom:12%;
+    font-size: 20pt;
+    z-index: 5;
+}
+
+.circle {
+	margin-right:50%;
+    margin-left:50%;
+    margin-top: 40px;
+    width: 15px;
+	height: 15px;
+	background: #fff;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+    z-index: 5;
+}
+
+
+#background {
+    background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.2), 
+      rgba(0, 0, 0, 0.2)
+    ),
+    url('images/bg1.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  
+}
+
+.go{
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-right:40px;
+    margin-left:40px;
+    margin-bottom: 20px;
+    display:inline-block;
+    position:relative;
+    top:80%;
+    left:10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: solid 2px #fff;
+    border-radius: 50px;
+    cursor:pointer;
+    overflow: hidden;
+    color: #fff;
+    font-size: 30pt;
+}
+
+
+#time img{
+    display:inherit;
+    left:10px;
+}
+
+#budget img{
+    display:inherit;
+    right:10px;
+}
+
+.icon {
+    height:60px;
+    weight:60px;
+    z-index: 5;
+    
+}
+
+#tri1 {
+    height:80px;
+    weight:80px;
+    z-index: 5;
+    margin-left: 46.5%;
+    margin-right: 46.5%;
+    margin-top:5%;
+}
+
+#tri2 {
+    height:80px;
+    weight:80px;
+    z-index: 5;
+    margin-left: 46.5%;
+    margin-right: 46.5%;
+    margin-top:5%;
+}
+
+
