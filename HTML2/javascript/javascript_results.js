@@ -1,8 +1,15 @@
-window.onload = function () {
-    var rImgs = document.getElementById("lPic","rPic");
-    var returnBut = document.getElementById("return");
-    var refreshBut = document.getElementById("refresh");
+window.onload = function(){
+//console.log("hello");
+
+    $.ajax({
+        url:"resultsServer.php",
+        dataType:"json",
+        data:{},
+        type:"post",
+        success:function(resp){
+            console.log(resp);
+        }
     
-    var results = [];
-    resultslength = results.length;
+    });
+    
 }
