@@ -10,13 +10,7 @@ $('#budget label').click(function(){
 var goBut = document.getElementById("goBut");    
     goBut.onclick= function(){
         
-        //to create div for results
-        var resultDiv = document.createElement("div");
-        document.body.appendChild(resultDiv);
-        resultDiv.style.width="500px";
-        resultDiv.style.height="500px";
-        resultDiv.style.backgroundColor="red";
-        resultDiv.style.zIndex="5";
+        //to create div for result
     
         var budgetInput = document.querySelector("input[name='budget']:checked").value;
         console.log(budgetInput);
@@ -27,7 +21,7 @@ var goBut = document.getElementById("goBut");
         var actID = 1;
         //for getting user inputs and posting results
         $.ajax({
-				url:"homeServer.php",
+				url:"resultsServer.php",
 				dataType:"json",
 				data:{
 					time: timeInput,
@@ -36,10 +30,27 @@ var goBut = document.getElementById("goBut");
 				},
 				type:"post",
 				success:function(resp){
-                    //$(resultDiv).append("<div>.resp.</div>");
-					console.log(resp);
+                    
+                    var status = resp['status'];
+                    if(status == 'success'){
+                        var activity = resp['activity'];
+                        
+                        for(var i in activity){
+                            console.log("Session post: ", resp);
+                            
+                            var activities = activity[i];
+                            
+                            var actDiv = $document.html("<div>" +activities[i]+ "</div>");
+                            
+                            actDiv();
+                        
+                        }
+  
+                    }
+                    
 				}
 			});
+        /*
         $.ajax({
                 url:"homeServer.php",
                 dataType:"json",
@@ -52,7 +63,7 @@ var goBut = document.getElementById("goBut");
                     console.log(resp);
                 }
         
-            });
+            });*/
 
          
     };

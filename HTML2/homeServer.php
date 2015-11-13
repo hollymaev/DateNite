@@ -2,7 +2,7 @@
 //this file is for manipulating data in the back
 include("connection.php");
 
-function showActivity(){
+/*function showActivity(){
 	global $con;
 	
 	$arrayStorage = array();
@@ -23,12 +23,13 @@ function showActivity(){
 		
 	}
 	
-	/*echo "<pre>";
+	echo "<pre>";
 	var_dump($arrayStorage);
-	echo "</pre>";*/
+	echo "</pre>";
 	echo json_encode($arrayStorage);
-}
+}*/
 
+/*
 function showCompany(){
     global $con;
 
@@ -53,7 +54,7 @@ function showCompany(){
     }
     echo json_encode($arrayStorage);
 }
-
+*/
 if($_POST['mode'] == 1){
 	showActivity();	
 } else if($_POST['mode'] == 2){
