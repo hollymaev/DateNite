@@ -1,7 +1,8 @@
 <?php
 include("connection.php");
-//include("homeServer");
+include("homeServer.php");
 global $con;
+global $arrayStorage;
 
-echo json_encode("HEEEEEy");
+echo json_encode($arrayStorage);
 ?>

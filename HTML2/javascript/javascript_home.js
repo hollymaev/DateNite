@@ -9,6 +9,15 @@ $('#budget label').click(function(){
           
 var goBut = document.getElementById("goBut");    
     goBut.onclick= function(){
+        
+        //to create div for results
+        var resultDiv = document.createElement("div");
+        document.body.appendChild(resultDiv);
+        resultDiv.style.width="500px";
+        resultDiv.style.height="500px";
+        resultDiv.style.backgroundColor="red";
+        resultDiv.style.zIndex="5";
+    
         var budgetInput = document.querySelector("input[name='budget']:checked").value;
         console.log(budgetInput);
          var timeInput = document.querySelector("input[name='time']:checked").value;
@@ -27,6 +36,7 @@ var goBut = document.getElementById("goBut");
 				},
 				type:"post",
 				success:function(resp){
+                    //$(resultDiv).append("<div>.resp.</div>");
 					console.log(resp);
 				}
 			});
