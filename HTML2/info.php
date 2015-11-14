@@ -13,9 +13,8 @@
     <BODY>
         <div id="background"> 
             <?php
-include('header.php');
-?>
-            <div id="grad1"></div>
+                include("header.php");
+            ?>
             <br/>
             <h2>INFORMATION</h2>
             <br/>

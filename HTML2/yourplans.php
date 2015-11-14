@@ -17,10 +17,11 @@
 
     <BODY>
         <div id="background"> 
-            <div id="header">
-            <img src="css/images/logo-light.png" id="logo2" alt="logo">
-            </div>
-            <div id="grad1"></div>
+            <?php
+            
+            include("header.php");
+            
+            ?>
             <br/>
             <h2>YOUR PLANS</h2>
             <br/>

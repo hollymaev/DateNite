@@ -1,4 +1,4 @@
-<!doctype html>
+<doctype! html>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -6,6 +6,13 @@
 </head>
 
 <body>
+    <?php
+
+    include("header.php");
+
+?>
+    
+    
 </body>
 <script>
 console.log(sessionStorage);

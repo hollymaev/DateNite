@@ -1,10 +1,6 @@
 <DOCTYPE! HTML>
 <HEAD>
     <TITLE> DATENITE </TITLE>
-    <LINK HREF = "JQ/jquery.mobile.custom.structure.css" REL="STYLESHEET">
-    <LINK HREF = "JQ/jquery.mobile.custom.structure.min.css" REL="STYLESHEET">
-    <LINK HREF = "JQ/jquery.mobile.custom.theme.css" REL="STYLESHEET">
-    <LINK HREF = "JQ/jquery.mobile.custom.theme.min.css" REL="STYLESHEET">
     <LINK HREF = "css/style.css" REL="STYLESHEET">
          <link rel="stylesheet" href="css/icons/font-awesome-4.4.0/css/font-awesome.css">
 
@@ -13,11 +9,11 @@
 
     <BODY>
         <div id="background"> 
-            <div id="header">
-            <img src="css/images/logo-light.png" id="logo2" alt="logo">
-            </div>
-            <div id="grad1"></div>
-                <span></span>
+            <?php
+            
+            include("header.php");
+            
+            ?>
             <div id="arrowicons">
             <i id="return" class="fa fa-arrow-left fa-5x"></i>
             <i id="refresh" class="fa fa-refresh fa-5x"></i>

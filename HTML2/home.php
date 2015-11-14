@@ -6,10 +6,6 @@
     <SCRIPT SRC = "JQ/jquery.mobile.custom.js" TYPE="TEXT/JAVASCRIPT"></SCRIPT>
     <SCRIPT SRC = "JQ/jquery.mobile.custom.min.js" TYPE="TEXT/JAVASCRIPT"></SCRIPT>
     <SCRIPT SRC = "javascript/javascript_home.js" TYPE="TEXT/JAVASCRIPT"></SCRIPT>
-    <LINK HREF = "JQ/jquery.mobile.custom.structure.css" REL="STYLESHEET">
-    <LINK HREF = "JQ/jquery.mobile.custom.structure.min.css" REL="STYLESHEET">
-    <LINK HREF = "JQ/jquery.mobile.custom.theme.css" REL="STYLESHEET">
-    <LINK HREF = "JQ/jquery.mobile.custom.theme.min.css" REL="STYLESHEET">
     <LINK HREF = "css/style.css" REL="STYLESHEET">
         <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
         
@@ -18,10 +14,11 @@
 
     <BODY>
         <div id="background"> 
-            <div id="header">
-            <img src="css/images/logo-light.png" id="logo2" alt="logo">
-            </div>
-            <div id="grad1"></div>
+            <?php
+            
+            include("header.php");
+
+            ?>
             <br/>
             <br/>
             <div id="blank">
@@ -55,10 +52,6 @@
             <div>
                 <button id="goBut" class="go"> GO</button>
             </div>
-            </div>
-            <div id="resultDiv">
-            </div>
-            <div id="msg">
             </div>
         </div>
 
