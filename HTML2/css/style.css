@@ -305,7 +305,8 @@ div {
 }
 
 #arrowicons {
-    display: inline-block;
+    z-index: 5;
+    display: none;
     color: #fff;
 }
 
@@ -368,8 +369,9 @@ div {
 .activity{
     height: 175px;
     width: 100vw;
-    background-color: blue;
+    border: dotted;
     z-index: 5;
+    padding-left: 50px;
 }
 
 /*For result span in home.php*/

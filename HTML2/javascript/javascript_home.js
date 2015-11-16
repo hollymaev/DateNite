@@ -14,7 +14,8 @@ var goBut = document.getElementById("goBut");
                 $("#time").css("display","none");
                 $("#goBut").css("display","none");
                 $("#blank").css("display","none");
-
+                $("#arrowicons").css("display", "inline-block");
+        //to create div for result
         //to create div for result
     
         var budgetInput = document.querySelector("input[name='budget']:checked").value;
@@ -43,14 +44,16 @@ var goBut = document.getElementById("goBut");
                     {
                         $("#grey").append(
                             
-                            "<div class='activity'><h4>" + results[i].act_name + "</h4><p>" + results[i].city + "<br>" + results[i].price_range + "<br>" + results[i].time_of_day + "</p></div>");
+                            "<div class='activity' id='"+results[i].ID+"'><h4>" + results[i].act_name + "</h4><p>Location: " + results[i].city + "<br>Budget: " + results[i].price_range + "<br>Time of Day: " + results[i].time_of_day + "</p></div>");
+                        //parseint when calling the id
+                        //activity.attr("id", results[i].ID);
+                        
+                        $(".activity").css("background","url('" + results[i].imgSrc + "')");
                         
                         //when appending the images
-                        //$("#grey").css("background-image", + results[i].img_src +);
-
                         //$("#activityResults").html("<div class='activity'>" + resp + "</div>");
                     }
-                }
+                 }
 			});
         /*
         $.ajax({
@@ -69,4 +72,6 @@ var goBut = document.getElementById("goBut");
 
          
     };
+
+
 };

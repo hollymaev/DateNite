@@ -53,6 +53,11 @@
             <div>
                 <button id="goBut" class="go"> GO</button>
             </div>
+                
+        <div id="arrowicons">
+            <i id="return" class="fa fa-arrow-left fa-5x"></i>
+            <i id="refresh" class="fa fa-refresh fa-5x"></i>
+        </div>
  
             </div>
 

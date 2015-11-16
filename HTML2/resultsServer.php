@@ -21,10 +21,12 @@ global $con;
 	
             //$arrayStorage[] = $row;
 			$activityInfo = array(
-				"act_name" => $row['act_name'],
+				"ID" => $row['ID'],
+                "act_name" => $row['act_name'],
 				"price_range" => $row['price_range'],
 				"time_of_day" => $row['time_of_day'],
-                "city" => $row['city']
+                "city" => $row['city'],
+                "imgSrc" => $row['imgSrc']
 			);
 			
 			array_push($arrayStorage, $activityInfo);
