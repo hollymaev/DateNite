@@ -9,7 +9,12 @@ $('#budget label').click(function(){
           
 var goBut = document.getElementById("goBut");    
     goBut.onclick= function(){
-        
+                $("#ResultSpan").css("display","block");
+                $("#budget").css("display","none");
+                $("#time").css("display","none");
+                $("#goBut").css("display","none");
+                $("#blank").css("display","none");
+
         //to create div for result
     
         var budgetInput = document.querySelector("input[name='budget']:checked").value;
@@ -31,24 +36,21 @@ var goBut = document.getElementById("goBut");
 				type:"post",
 				success:function(resp){
                     
-                    var status = resp['status'];
-                    if(status == 'success'){
-                        var activity = resp['activity'];
-                        
-                        for(var i in activity){
-                            console.log("Session post: ", resp);
-                            
-                            var activities = activity[i];
-                            
-                            var actDiv = $document.html("<div>" +activities[i]+ "</div>");
-                            
-                            actDiv();
-                        
-                        }
-  
-                    }
                     
-				}
+                    var results = resp;
+                    //console.log(results);                
+                    for(var i in results)
+                    {
+                        $("#grey").append(
+                            
+                            "<div class='activity'><h4>" + results[i].act_name + "</h4><p>" + results[i].city + "<br>" + results[i].price_range + "<br>" + results[i].time_of_day + "</p></div>");
+                        
+                        //when appending the images
+                        //$("#grey").css("background-image", + results[i].img_src +);
+
+                        //$("#activityResults").html("<div class='activity'>" + resp + "</div>");
+                    }
+                }
 			});
         /*
         $.ajax({

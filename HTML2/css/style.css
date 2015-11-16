@@ -92,11 +92,12 @@ div {
     height: 975px;
 }
 
-#box {
+.box {
+    top: 150px;
     width: 170px;
     height: 50px;
     padding: 15px;
-    display:inline-block;
+    display:block;
     position:relative;
     left:50px;
     background-color: rgba(0, 0, 0, 0.2);
@@ -105,6 +106,18 @@ div {
     color: #fff;
     font-size: 25pt;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+#box1{
+    margin-left: 175px;
+    margin-right: 50px;
+    float:left;
+}
+#box2{
+    margin-right: 175px;
+    margin-left: 50px;
+    float:right;
 }
 
 #logo2 {
@@ -227,12 +240,16 @@ div {
 #time {
     margin-right: 70%;
     margin-left: 30%;
-    display:inherit;
+
 }
 #budget {
+    top:300px;
     margin-right: 30%;
     margin-left: 70%;
-    display:inherit;
+}
+.selectors{
+    position:relative;
+    display: inline-block;
 }
 /*
 .icon {
@@ -327,14 +344,37 @@ div {
 
 #budget label img {
     padding: 3px;
-    height:60px;
-    weight:60px;
+    height:10%;
+    weight:10%;
     z-index: 5;
     
 }
 #time label img{
     padding: 3px;
-    height:60px;
-    weight:60px;
+    height:10%;
+    weight:10%;
     z-index: 5;
+}
+
+/*for results*/
+#activityResults{
+    height: 500px;
+    width: 500px;
+    background-color: aqua;
+    z-index: 5;
+    display: none;
+
+}
+.activity{
+    height: 175px;
+    width: 100vw;
+    background-color: blue;
+    z-index: 5;
+}
+
+/*For result span in home.php*/
+#ResultSpan{
+display: none;
+text-align:center;
+font-size: 25pt;
 }

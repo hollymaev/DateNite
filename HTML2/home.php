@@ -19,17 +19,17 @@
             include("header.php");
 
             ?>
-            <br/>
-            <br/>
             <div id="blank">
-                <div id="box"> TIME </div>
-                <div id="box"> BUDGET</div>
+                <div class="box" id="box1"> TIME </div>
+                <div class="box" id="box2"> BUDGET</div>
             </div>
             <br/>
             <br/>
             <div id="grey">
             
-            <div id="budget">
+            <div id="ResultSpan">What Do You Think?</div>
+        <div id="selectors">
+            <div class="selectors" id="budget">
                 <input type="radio" name="budget" id="low" value="Low">
                 <label for="low"><img src="css/icons/budget/icon_budget_l_resize.png"/></label>
                 <input type="radio" name="budget" id="Mid" value="Mid">
@@ -37,7 +37,7 @@
                 <input type="radio" name="budget" id="High" value="High">
                 <label for="High"><img src="css/icons/budget/icon_budget_h_resize.png"/></label>
             </div>
-            <div id="time">
+            <div class="selectors" id="time">
                <input type="radio" name="time" id="Morning" value="Morning">
                 <label for="Morning"><img src="css/icons/time/icon_time_m2_resize.png"/></label>
                 <input type="radio" name="time" id="Afternoon" value="Afternoon">
@@ -47,12 +47,15 @@
                 <input type="radio" name="time" id="All" value="All">
                 <label for="All"><img src="css/icons/time/icon_time_ad2_resize.png"/></label>
             </div>
+        </div>
             
 
             <div>
                 <button id="goBut" class="go"> GO</button>
             </div>
+ 
             </div>
+
         </div>
 
     </BODY>

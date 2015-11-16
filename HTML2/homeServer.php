@@ -55,8 +55,10 @@ function showCompany(){
     echo json_encode($arrayStorage);
 }
 */
+
 if($_POST['mode'] == 1){
-	showActivity();	
+	showActivity();
+    //renderJSON();
 } else if($_POST['mode'] == 2){
 	showCompany();	
 }
