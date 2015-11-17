@@ -9,9 +9,9 @@
     $data = array("status" => "fail", "msg" => "$methodType");
 
     $servername = "localhost";
-    $dblogin = "root";
-    $dbpassword = "root";
-    $dbname = "datenite";
+    $dblogin = "datenit2_holly";
+    $dbpassword = "2425475051";
+    $dbname = "datenit2_datenite";
 
     if ($methodType === 'GET') {
 

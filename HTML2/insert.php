@@ -2,6 +2,7 @@
     //$con = mysqli_connect("localhost", "root", "root", "datenite");
     
     include ("connection.php");
+    global $con;
     //include ("home.php");
         
     error_reporting(E_ALL && ~E_NOTICE);
@@ -15,7 +16,7 @@
         
         
         
-            $query = "FNusers (fname, lname, password, email) VALUES ('$fname', '$lname', '$pass', '$email')";
+            $query = "INSERT INTO users (fname, lname, password, email) VALUES ('$fname', '$lname', '$pass', '$email')";
             $result = mysqli_query($con, $query);
             
             if($result){

@@ -19,9 +19,9 @@
                 $Pass = $_POST["lgpass"];
                 
                 $servername = "localhost";
-                $dblogin = "root";
-                $dbpassword = "root";
-                $dbname = "datenite";
+                $dblogin = "datenit2_holly";
+                $dbpassword = "2425475051";
+                $dbname = "datenit2_datenite";
                     
                 try {
                     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $dblogin, $dbpassword);
@@ -41,24 +41,12 @@
                         $data = array("status" => "success", "sid" => $sid);
 
                     }else{
-                        $data = array("status" => "fail", "msg" => "Firstname/password not correct.");
+                        include("home.php");
                     }
 
                 }catch(PDOException $e){
                     $data = array("status" => "fail", "msg" => $e->getMessage());
                 }
-
-            }else{
-                $data = array("status" => "fail", "msg" => "Either login or password were absent.");
-            }
-            
-        }else{
-            $data = array("status" => "fail", "msg" => "Has to be an AJAX call.");
-        }
-
-    }else{
-        $data = array("status" => "fail", "msg" => "Error: only POST allowed.");
-    }
 
     echo json_encode($data, JSON_FORCE_OBJECT);
 

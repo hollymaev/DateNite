@@ -40,6 +40,7 @@ $(document).ready(
                 $("#splash_page").fadeOut();
                 $("#login_page").fadeOut();
                 $("#signup_page").fadeIn();
+                location.href = "home.php";
             }
         );
         
