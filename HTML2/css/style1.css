@@ -9,10 +9,10 @@ html {
 
 div {
     text-align: center;
-    font-size: 14pt;
+    font-size: 13pt;
     font-family: 'Gill Sans MT', sans-serif;
     font-weight: 100;
-    color:#fff;
+    color:rgb(220,220,220);
     z-index: 5;
 }
 
@@ -30,8 +30,13 @@ body {
     background-size: cover;
 }
 
-.h1{
-    font-size: 35pt;
+.p1{
+    font-size: 4em;
+}
+
+.p2{
+    font-size: 2.5em;
+    margin-bottom: 5%;
 }
 
 
@@ -49,12 +54,12 @@ body {
     position:relative;
     top:80%;
     left:12px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border: solid 4px rgba(150, 150, 150, 0.6);
+    background-color: rgba(25, 25, 25, 0.7);
+    border: solid 4px rgba(150, 150, 150, 0.7);
     cursor:pointer;
     overflow: hidden;
-    color: #fff;
-    font-size: 30pt;
+    color: rgba(230,230,230,0.9);
+    font-size: 2.4em;
 }
 
 .splashbut2 {
@@ -63,7 +68,7 @@ body {
     text-decoration: underline;
     margin-top:1%;
     margin-bottom:12%;
-    font-size: 24pt;
+    font-size: 2em;
     z-index: 5;
     cursor:pointer;
 }
@@ -79,18 +84,43 @@ body {
 
 #logo {
     height:11%;
-    weight:100%;
+    weight:auto;
     z-index: 5;
     margin-top: 5%;
+    margin-bottom: 5%;
+    position:relative;
+    margin-right:auto;
+    margin-left:auto;
+    text-align: center;
+}
+
+#llogo {
+    height:15%;
+    weight:100%;
+    z-index: 5;
+    margin-top: 15%;
+    margin-bottom: 5%;
+    position:relative;
+}
+
+#slogo {
+    height:9%;
+    weight:100%;
+    z-index: 5;
+    margin-top: 15%;
+    margin-bottom: 3%;
     position:relative;
 }
 
 .circle {
-	margin-right:50%;
-    margin-left:50%;
-    margin-top: 4%;
+    margin-top: 5%;
+    margin-bottom: 6%;
     width: 13px;
 	height: 13px;
+    margin-right:auto;
+    margin-left:auto;
+    text-align: center;
+    position: relative;
 	background: #fff;
 	-moz-border-radius: 50px;
 	-webkit-border-radius: 50px;
@@ -99,11 +129,14 @@ body {
 }
 
 .circle2 {
-	margin-right:50%;
-    margin-left:50%;
-    margin-top: 40px;
-    width: 15px;
-	height: 15px;
+    margin-top: 4%;
+    margin-bottom: 8%;
+    width: 13px;
+	height: 13px;
+    margin-right:auto;
+    margin-left:auto;
+    text-align: center;
+    position: relative;
 	background: #fff;
 	-moz-border-radius: 50px;
 	-webkit-border-radius: 50px;
@@ -115,8 +148,7 @@ body {
     height:5%;
     weight:5%;
     z-index: 5;
-    margin-left: 46.5%;
-    margin-right: 46.5%;
+    position:relative;
     margin-top:3%;
     margin-bottom:-1%;
 }
@@ -125,8 +157,7 @@ body {
     height:5%;
     weight:5%;
     z-index: 5;
-    margin-left: 46.5%;
-    margin-right: 46.5%;
+    position:relative;
     margin-top:4%;
     margin-bottom:-1%;
 }
@@ -138,42 +169,55 @@ body {
 
 .inbox{
     border: none;
-    background-color: rgba(10, 10, 10, 0.5);
-    height: 6%;
+    height: 7%;
     width: 100%;
     margin: 2%;
-    font-size: 25pt;
-    padding-left:15%;
+    font-size: 2.3em;
+    padding-left:13%;
+}
+
+.inb{
+    margin-left: 6%;
+    margin-right: 6%;
+    margin-top: 6%;
+    margin-bottom: 2%;
+}
+
+.inb2{
+    margin-left: 6%;
+    margin-right: 6%;
+    margin-top: 5%;
+    margin-bottom: 2%;
 }
 
 .in1{
     background: url(icon/input-name_icon.png) no-repeat left center;
     background-size: 9%;
-    background-color: rgba(10, 10, 10, 0.5);
+    background-color: rgba(10, 10, 10, 0.6);
 }
 
 .in2{
     background: url(icon/input-name_icon.png) no-repeat left center;
     background-size: 9%;
-    background-color: rgba(10, 10, 10, 0.5);
+    background-color: rgba(10, 10, 10, 0.6);
 }
 
 .in3{
     background: url(icon/input-email_icon.png) no-repeat left center;
     background-size: 9%;
-    background-color: rgba(10, 10, 10, 0.5);
+    background-color: rgba(10, 10, 10, 0.6);
 }
 
 .in4{
     background: url(icon/input-password_icon.png) no-repeat left center;
     background-size: 9%;
-    background-color: rgba(10, 10, 10, 0.5);
+    background-color: rgba(10, 10, 10, 0.6);
 }
 
 .in5{
     background: url(icon/input-password_icon.png) no-repeat left center;
     background-size: 9%;
-    background-color: rgba(10, 10, 10, 0.5);
+    background-color: rgba(10, 10, 10, 0.6);
 }
 
 ::-webkit-input-placeholder {
