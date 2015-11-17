@@ -1,5 +1,5 @@
 window.onload = function () {
-
+"use strict";
 //for icons
 $('#time input:radio').addClass('input_hidden');
 $('#budget input:radio').addClass('input_hidden');
@@ -7,14 +7,16 @@ $('#budget label').click(function(){
     $(this).addClass('selected').siblings().removeClass('selected');
 });
           
-var goBut = document.getElementById("goBut");    
+var goBut = document.getElementById("goBut");
+
     goBut.onclick= function(){
+                $("#arrowicons").css("display","block");
                 $("#ResultSpan").css("display","block");
                 $("#budget").css("display","none");
                 $("#time").css("display","none");
                 $("#goBut").css("display","none");
                 $("#blank").css("display","none");
-                $("#arrowicons").css("display", "inline-block");
+                //$("#arrowicons").css("display", "inline-block");
         //to create div for result
         //to create div for result
     
@@ -24,7 +26,7 @@ var goBut = document.getElementById("goBut");
         console.log(timeInput);
         //hard coded the activity ID under the company table
         //need to make it dynamic to match the user's inputs
-        var actID = 1;
+        //var actID = 1;
         //for getting user inputs and posting results
         $.ajax({
 				url:"resultsServer.php",
@@ -36,42 +38,63 @@ var goBut = document.getElementById("goBut");
 				},
 				type:"post",
 				success:function(resp){
-                    
+                    console.log(resp);
                     
                     var results = resp;
                     //console.log(results);                
                     for(var i in results)
                     {
+                        var newID = results[i].ID;
+                        
                         $("#grey").append(
                             
-                            "<div class='activity' id='"+results[i].ID+"'><h4>" + results[i].act_name + "</h4><p>Location: " + results[i].city + "<br>Budget: " + results[i].price_range + "<br>Time of Day: " + results[i].time_of_day + "</p></div>");
+                            "<div class='activity' style='background:url("+results[i].imgSrc+");' id='"+newID+"'><h4>" + results[i].act_name + "</h4><p>Location: " + results[i].city + "<br>Budget: " + results[i].price_range + "<br>Time of Day: " + results[i].time_of_day + "</p></div>");
+                        
+                        
+                        //$(".activity").css("background","linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2));");
                         //parseint when calling the id
                         //activity.attr("id", results[i].ID);
                         
-                        $(".activity").css("background","url('" + results[i].imgSrc + "')");
+                        //$(".activity").css("background-image","url('" + results[i].imgSrc + "')");
                         
                         //when appending the images
                         //$("#activityResults").html("<div class='activity'>" + resp + "</div>");
                     }
-                 }
-			});
-        /*
-        $.ajax({
-                url:"homeServer.php",
+   
+            $(".activity").click(function(){
+                var actID= $(".activity").attr("id");
+                
+                $("#ResultSpan").css("display","none");
+                $(".activity").css("display","none");
+                $("#infoResults").css("display","block");
+                    $.ajax({
+                url:"infoServer.php",
                 dataType:"json",
                 data:{
                     activityID: actID,
                     mode: 2
                 },
                 type:"post",
-                success:function(resp){
-                    console.log(resp);
+                success:function(company){
+                    var company = company;
+                    
+                    for(var i in company){
+                            
+                        $("#infoResults").append("<div class='companyinfo'><h3>"+company[i].company+"</h3><p>"+company[i].address+"<br>"+company[i].phone+"<br>"+company[i].website+"<br><br>"+company[i].description+"</p></div>");
+                    }
                 }
         
-            });*/
+                    });
+            });
+        }
+});
 
-         
-    };
 
+
+    }; //end of button click function
+var backBut = document.getElementById("return");
+backBut.onclick = function(){
+    location.href="home.php";
+}
 
 };

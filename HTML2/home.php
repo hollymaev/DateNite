@@ -7,7 +7,7 @@
     <SCRIPT SRC = "JQ/jquery.mobile.custom.min.js" TYPE="TEXT/JAVASCRIPT"></SCRIPT>
     <SCRIPT SRC = "javascript/javascript_home.js" TYPE="TEXT/JAVASCRIPT"></SCRIPT>
     <LINK HREF = "css/style.css" REL="STYLESHEET">
-        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/icons/font-awesome-4.4.0/css/font-awesome.css">
         
         <title>Home</title>
 </HEAD>
@@ -27,7 +27,7 @@
             <br/>
             <div id="grey">
             
-            <div id="ResultSpan">What Do You Think?</div>
+            <div class="span" id="ResultSpan">What Do You Think?</div>
         <div id="selectors">
             <div class="selectors" id="budget">
                 <input type="radio" name="budget" id="low" value="Low">
@@ -53,12 +53,13 @@
             <div>
                 <button id="goBut" class="go"> GO</button>
             </div>
-                
-        <div id="arrowicons">
-            <i id="return" class="fa fa-arrow-left fa-5x"></i>
-            <i id="refresh" class="fa fa-refresh fa-5x"></i>
-        </div>
- 
+            
+            <div id="arrowicons">
+                <i id="return" class="fa fa-arrow-left fa-5x"></i>
+            </div>
+                <div class="span"id="infoResults">
+                    More Information!
+                </div>
             </div>
 
         </div>

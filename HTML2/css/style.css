@@ -375,8 +375,21 @@ div {
 }
 
 /*For result span in home.php*/
-#ResultSpan{
-display: none;
+.span{
 text-align:center;
 font-size: 25pt;
+}
+#ResultSpan{
+display: none;
+}
+#infoResults{
+display:none;
+width: 70vw;
+height: 70vh;
+background-color: dimgray;
+}
+.companyinfo{
+width: auto;
+height: auto;
+background-color: darkgray;
 }

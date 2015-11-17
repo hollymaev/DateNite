@@ -17,9 +17,9 @@ function showCompany(){
     if($result){
         while($row = mysqli_fetch_array($result)){
             $companyInfo = array(
-               "company name" => $row['company_name'],
+               "company" => $row['company_name'],
                 "address" => $row['address'],
-                "phone number" => $row['phone_number'],
+                "phone" => $row['phone_number'],
                 "website" => $row['website'],
                 "description" => $row['description']
             );
