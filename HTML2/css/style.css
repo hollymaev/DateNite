@@ -1,0 +1,395 @@
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 627px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+
+  }
+
+html {
+    height: 100%;
+    width: 100%; 
+}
+
+body {
+    height: 100%;
+    width: 100%; 
+}
+
+h1{
+    text-align: center;
+    font-size: 80pt;
+    font-family: 'Gill Sans MT', sans-serif;
+    font-weight: 200;
+    color: #fff;
+    z-index: 5;
+}
+
+h3{
+    text-align: center;
+    font-size: 20pt;
+    font-family: 'Gill Sans MT', sans-serif;
+    font-weight: 100;
+    color:#fff;
+    z-index: 5;
+}
+
+h2 {
+    text-align: center;
+    font-size: 50pt;
+    font-family: 'Gill Sans MT', sans-serif;
+    font-weight: 100;
+    color:#fff;
+    z-index: 5;
+}
+
+div {
+    font-size: 14pt;
+    font-family: 'Gill Sans MT', sans-serif;
+    font-weight: 100;
+    color:#fff;
+}
+
+#left{
+    text-align: left;
+    font-size: 30pt;
+    font-family: 'Gill Sans MT', sans-serif;
+    font-weight: 100;
+    color:#fff;
+    z-index: 5;
+}
+
+#right{
+    text-align: right;
+    font-size: 30pt;
+    font-family: 'Gill Sans MT', sans-serif;
+    font-weight: 100;
+    color:#fff;
+    z-index: 5;
+}
+
+
+#logo {
+    height:180px;
+    weight:180px;
+    z-index: 5;
+    
+}
+
+#blank {
+    height:375px;
+}
+
+#header {
+    width:100%;
+    height:200px;
+    background-color: #24292E;
+}
+
+#grey {
+    background-color: #24292E;
+    width:100%;
+    height: 975px;
+}
+
+.box {
+    top: 150px;
+    width: 170px;
+    height: 50px;
+    padding: 15px;
+    display:block;
+    position:relative;
+    left:50px;
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor:pointer;
+    overflow: hidden;
+    color: #fff;
+    font-size: 25pt;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+#box1{
+    margin-left: 175px;
+    margin-right: 50px;
+    float:left;
+}
+#box2{
+    margin-right: 175px;
+    margin-left: 50px;
+    float:right;
+}
+
+#logo2 {
+    height:140px;
+    weight:140px;
+    z-index: 5;
+    margin-left: 44%;
+    margin-right:44%;
+    margin-top: 25px;
+    
+}
+
+.splashButton {
+    width: 280px;
+    padding: 15px;
+    margin-top: 15px;
+    margin-right:10%;
+    margin-left:10%;
+    display:inline-block;
+    position:relative;
+    top:80%;
+    left:12px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: solid 2px #fff;
+    cursor:pointer;
+    overflow: hidden;
+    color: #fff;
+    font-size: 25pt;
+}
+
+
+#splashSignup {
+    border:none;
+    background-color: transparent;
+    text-decoration: underline;
+    margin-top:2px;
+    margin-bottom:12%;
+    font-size: 20pt;
+    z-index: 5;
+}
+
+.circle {
+	margin-right:50%;
+    margin-left:50%;
+    margin-top: 40px;
+    width: 15px;
+	height: 15px;
+	background: #fff;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+    z-index: 5;
+}
+
+.minicircle1 {
+	margin-right:70%;
+    margin-left:30%;
+    margin-bottom: 5%;
+    width: 7px;
+	height: 7px;
+	background: #FF7DEE;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+    z-index: 5;
+    box-shadow: 1px 1px 1px #FFA8F3;
+}
+
+.minicircle2 {
+	margin-right:30%;
+    margin-left:70%;
+    margin-bottom: 5%;
+    width: 7px;
+	height: 7px;
+	background: #5BD9FC;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+    z-index: 5;
+    box-shadow: 1px 1px 1px #9CE9FF;
+}
+
+
+#background {
+    background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.2), 
+      rgba(0, 0, 0, 0.2)
+    ),
+    url('images/bg1.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  
+}
+
+.go{
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    margin-top: 30px;
+    margin-right:50%;
+    margin-left:50%;
+    margin-bottom: 20px;
+    display:inline-block;
+    position:relative;
+    top:80%;
+    left:10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: solid 2px #fff;
+    border-radius: 50px;
+    cursor:pointer;
+    overflow: hidden;
+    color: #fff;
+    font-size: 30pt;
+}
+
+
+#time {
+    margin-right: 70%;
+    margin-left: 30%;
+
+}
+#budget {
+    top:300px;
+    margin-right: 30%;
+    margin-left: 70%;
+}
+.selectors{
+    position:relative;
+    display: inline-block;
+}
+/*
+.icon {
+    height:60px;
+    weight:60px;
+    z-index: 5;
+    
+}
+*/
+#tri1 {
+    height:80px;
+    weight:80px;
+    z-index: 5;
+    margin-left: 46.5%;
+    margin-right: 46.5%;
+    margin-top:5%;
+}
+
+#tri2 {
+    height:80px;
+    weight:80px;
+    z-index: 5;
+    margin-left: 46.5%;
+    margin-right: 46.5%;
+    margin-top:5%;
+}
+
+#grad1 {
+    height: 8px;
+    width:100%;
+    background: -webkit-linear-gradient(right, #683780 , #DE54CC); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(to right, #683780, #DE54CC); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #683780, #DE54CC); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #683780, #DE54CC); /* Standard syntax (must be last) */
+}
+
+#lPic {
+    background:#24292E;
+    box-shadow: 0 2px 4px #CCC;
+    url('');
+    border: none;
+    height:200px;
+    width:400px;
+}
+
+#rPic {
+    background:#24292E;
+    box-shadow: 0 2px 4px #CCC;
+    url('');
+    border: none;
+    height:200px;
+    width:400px;
+}
+
+#arrowicons {
+    z-index: 5;
+    display: none;
+    color: #fff;
+}
+
+#menu{
+    color: #fff;
+    z-index: 2;
+}
+
+.boxes {
+    background:#24292E;
+    box-shadow: 0 2px 4px #CCC;
+    url('');
+    border: none;
+    height:200px;
+    width:100%;
+}
+
+
+#map {
+    height: 250px;
+    width: 350px;
+    margin-right:40%;
+    margin-left:40%;
+}
+/*selectors*/
+.input_hidden {
+    position: absolute;
+    left: -9999px;
+}
+
+.selected {
+    background-color: none;
+}
+
+
+
+#budget label img {
+    padding: 3px;
+    height:10%;
+    weight:10%;
+    z-index: 5;
+    
+}
+#time label img{
+    padding: 3px;
+    height:10%;
+    weight:10%;
+    z-index: 5;
+}
+
+/*for results*/
+#activityResults{
+    height: 500px;
+    width: 500px;
+    background-color: aqua;
+    z-index: 5;
+    display: none;
+
+}
+.activity{
+    height: 175px;
+    width: 100vw;
+    border: dotted;
+    z-index: 5;
+    padding-left: 50px;
+}
+
+/*For result span in home.php*/
+.span{
+text-align:center;
+font-size: 25pt;
+}
+#ResultSpan{
+display: none;
+}
+#infoResults{
+display:none;
+width: 70vw;
+height: 70vh;
+background-color: dimgray;
+}
+.companyinfo{
+width: auto;
+height: auto;
+background-color: darkgray;
+}

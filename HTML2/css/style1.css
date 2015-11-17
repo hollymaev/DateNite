@@ -1,0 +1,183 @@
+/********************
+******  WHOLE  ******
+*********************/
+
+html {
+    height: 100%;
+    width: 100%; 
+}
+
+div {
+    text-align: center;
+    font-size: 14pt;
+    font-family: 'Gill Sans MT', sans-serif;
+    font-weight: 100;
+    color:#fff;
+    z-index: 5;
+}
+
+body { 
+    background-image: url('images/bg1.png');
+    margin:0;
+   	padding:0;
+   	height:100%;
+   	background-repeat: ;
+   	background-attachment: fixed;
+   	background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.h1{
+    font-size: 35pt;
+}
+
+
+/********************
+******  BUTTON  *****
+*********************/
+
+.splashButton {
+    width: 280px;
+    padding: 1%;
+    margin-top: 1%;
+    margin-right:10%;
+    margin-left:10%;
+    display:inline-block;
+    position:relative;
+    top:80%;
+    left:12px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: solid 4px rgba(150, 150, 150, 0.6);
+    cursor:pointer;
+    overflow: hidden;
+    color: #fff;
+    font-size: 30pt;
+}
+
+.splashbut2 {
+    border:none;
+    background-color: transparent;
+    text-decoration: underline;
+    margin-top:1%;
+    margin-bottom:12%;
+    font-size: 24pt;
+    z-index: 5;
+    cursor:pointer;
+}
+
+.sb2{
+    margin-left: -45%;
+}
+
+
+/********************
+******  ICON  *******
+*********************/
+
+#logo {
+    height:11%;
+    weight:100%;
+    z-index: 5;
+    margin-top: 5%;
+    position:relative;
+}
+
+.circle {
+	margin-right:50%;
+    margin-left:50%;
+    margin-top: 4%;
+    width: 13px;
+	height: 13px;
+	background: #fff;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+    z-index: 5;
+}
+
+.circle2 {
+	margin-right:50%;
+    margin-left:50%;
+    margin-top: 40px;
+    width: 15px;
+	height: 15px;
+	background: #fff;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+    z-index: 5;
+}
+
+#tri1 {
+    height:5%;
+    weight:5%;
+    z-index: 5;
+    margin-left: 46.5%;
+    margin-right: 46.5%;
+    margin-top:3%;
+    margin-bottom:-1%;
+}
+
+#tri2 {
+    height:5%;
+    weight:5%;
+    z-index: 5;
+    margin-left: 46.5%;
+    margin-right: 46.5%;
+    margin-top:4%;
+    margin-bottom:-1%;
+}
+
+
+/********************
+******  IPUT  *******
+*********************/
+
+.inbox{
+    border: none;
+    background-color: rgba(10, 10, 10, 0.5);
+    height: 6%;
+    width: 100%;
+    margin: 2%;
+    font-size: 25pt;
+    padding-left:15%;
+}
+
+.in1{
+    background: url(icon/input-name_icon.png) no-repeat left center;
+    background-size: 9%;
+    background-color: rgba(10, 10, 10, 0.5);
+}
+
+.in2{
+    background: url(icon/input-name_icon.png) no-repeat left center;
+    background-size: 9%;
+    background-color: rgba(10, 10, 10, 0.5);
+}
+
+.in3{
+    background: url(icon/input-email_icon.png) no-repeat left center;
+    background-size: 9%;
+    background-color: rgba(10, 10, 10, 0.5);
+}
+
+.in4{
+    background: url(icon/input-password_icon.png) no-repeat left center;
+    background-size: 9%;
+    background-color: rgba(10, 10, 10, 0.5);
+}
+
+.in5{
+    background: url(icon/input-password_icon.png) no-repeat left center;
+    background-size: 9%;
+    background-color: rgba(10, 10, 10, 0.5);
+}
+
+::-webkit-input-placeholder {
+    color: rgba(150, 150, 150, 0.5);
+}
+
+
