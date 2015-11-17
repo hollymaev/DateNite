@@ -39,7 +39,7 @@ var goBut = document.getElementById("goBut");
 				type:"post",
 				success:function(resp){
                     console.log(resp);
-                    
+                    var actDiv = $
                     var results = resp;
                     //console.log(results);                
                     for(var i in results)
@@ -60,18 +60,19 @@ var goBut = document.getElementById("goBut");
                         //when appending the images
                         //$("#activityResults").html("<div class='activity'>" + resp + "</div>");
                     }
+            
    
             $(".activity").click(function(){
                 var actID= $(".activity").attr("id");
-                
+                var actualID = parseInt(actID);
                 $("#ResultSpan").css("display","none");
                 $(".activity").css("display","none");
                 $("#infoResults").css("display","block");
                     $.ajax({
-                url:"infoServer.php",
+                url:"resultsServer.php",
                 dataType:"json",
                 data:{
-                    activityID: actID,
+                    activityID: actualID,
                     mode: 2
                 },
                 type:"post",
@@ -94,6 +95,7 @@ var goBut = document.getElementById("goBut");
     }; //end of button click function
 var backBut = document.getElementById("return");
 backBut.onclick = function(){
+    //i know that i have to actually hide things but just bare with me here
     location.href="home.php";
 }
 
