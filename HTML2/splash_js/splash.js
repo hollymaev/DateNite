@@ -5,9 +5,9 @@ $(document).ready(
         
         $("#splashLogin1").click(
             function(){
-                $("#splash_page").fadeOut();
-                $("#signup_page").fadeOut();
-                $("#login_page").fadeIn();
+                $("#splash_page").fadeOut(300);
+                $("#signup_page").fadeOut(300);
+                $("#login_page").fadeIn(500);
             }
         );
         
@@ -24,14 +24,6 @@ $(document).ready(
                 $("#splash_page").fadeOut();
                 $("#signup_page").fadeOut();
                 $("#login_page").fadeIn();
-            }
-        );
-        
-        $("#splashSignup2").click(
-            function(){
-                $("#splash_page").fadeOut();
-                $("#login_page").fadeOut();
-                $("#signup_page").fadeIn();
             }
         );
         
@@ -62,6 +54,41 @@ $(document).ready(
                 location.href = "home.php";
             }
         );
+        
+        $("#splashSignup2").click(
+            function(){
+                $.post($("#su").attr("action"),
+                    $("#su:input").serializeArray(),
+                    function(info){
+                        $("#errMsg").innerHTML(info);
+                        $("#errMsg").css({"text-align":"center","margin-top":"1%", 'color':'white'});
+                    }
+                    
+                    /*
+                    $.ajax({
+                        url: "check.php",
+                        type: "POST",
+                        dataType: "JSON",
+                        data:{
+                            fname: fname,
+                            pass: pass,
+                        },
+                        success: function(data){
+                            console.log(data);
+                            if(data.status === true){
+                                window.location.replace("home.php");
+                            }else{
+                                alert("Try again please.");
+                            }
+                        }
+                    });
+                    */
+                
+                );
+            }
+        );
+        
+        
 
     }
 );
