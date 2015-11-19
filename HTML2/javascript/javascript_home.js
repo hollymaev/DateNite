@@ -63,12 +63,14 @@ var goBut = document.getElementById("goBut");
             
    
             $(".activity").click(function(){
-                var actID= $(".activity").attr("id");
+                var actID= $(this).attr("id");
+                
                 var actualID = parseInt(actID);
+                console.log(actualID);
                 $("#ResultSpan").css("display","none");
                 $(".activity").css("display","none");
                 $("#infoResults").css("display","block");
-                    $.ajax({
+               $.ajax({
                 url:"resultsServer.php",
                 dataType:"json",
                 data:{

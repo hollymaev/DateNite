@@ -65,5 +65,7 @@
         </div>
 
     </BODY>
+            <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+            async defer></script>
     
 </HTML>
