@@ -25,7 +25,7 @@
             </div>
             <br/>
             <br/>
-            <div id="grey">
+            <div id="grey"><img id="optLine" src="css/icon/options-line.png">
             
             <div class="span" id="ResultSpan">What Do You Think?</div>
         <div id="selectors">
@@ -60,7 +60,7 @@
                 <div class="span"id="infoResults">
                     More Information!
                 </div>
-            </div>
+                </img></div>
 
         </div>
 

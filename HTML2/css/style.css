@@ -91,6 +91,13 @@ div {
     width:100%;
     height: 1000px;
 }
+#optLine{
+    z-index: -1;
+    margin-left: 200px;
+    margin-right:auto;
+    width: 25vw;
+    height: 60vh;
+}
 
 .box {
     top: 150px;
