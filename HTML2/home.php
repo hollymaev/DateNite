@@ -55,7 +55,7 @@
             </div>
             
             <div id="arrowicons">
-                <i id="return" class="fa fa-arrow-left fa-5x"></i>
+                <i id="return" class="fa fa-angle-left fa-5x"></i>
             </div>
                 <div class="span"id="infoResults">
                     More Information!
@@ -65,7 +65,6 @@
         </div>
 
     </BODY>
-            <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
-            async defer></script>
+           
     
 </HTML>

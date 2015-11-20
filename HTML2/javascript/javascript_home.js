@@ -16,6 +16,7 @@ var goBut = document.getElementById("goBut");
                 $("#time").css("display","none");
                 $("#goBut").css("display","none");
                 $("#blank").css("display","none");
+                //$("#background").css("url","none");
                 //$("#arrowicons").css("display", "inline-block");
         //to create div for result
         //to create div for result
