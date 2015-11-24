@@ -45,7 +45,7 @@ var goBut = document.getElementById("goBut");
                     //console.log(results);                
                     for(var i in results)
                     {
-                        var newID = results[i].ID;
+                        var newID = results[i].compID;
                         
                         $("#grey").append(
                             
@@ -75,7 +75,7 @@ var goBut = document.getElementById("goBut");
                 url:"resultsServer.php",
                 dataType:"json",
                 data:{
-                    activityID: actualID,
+                    compID: actualID,
                     mode: 2
                 },
                 type:"post",
@@ -84,7 +84,7 @@ var goBut = document.getElementById("goBut");
                     
                     for(var i in company){
                             
-                        $("#infoResults").append("<div class='companyinfo'><h3>"+company[i].company+"</h3><p>"+company[i].address+"<br>"+company[i].phone+"<br>"+company[i].website+"<br><br>"+company[i].description+"</p></div>");
+                        $("#infoResults").append("<div class='companyinfo'><h3>"+company[i].company+"</h3><p>"+company[i].address+"<br>"+company[i].phone+"<br>"+company[i].website+"<br><br>"+company[i].description+"</p><img src='css/icon/save-star-before_icon.png'></div>");
                     }
                 }
         

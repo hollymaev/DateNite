@@ -26,6 +26,7 @@
                 try {
                     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $dblogin, $dbpassword);
                     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                    
                     $sql = "SELECT * FROM users WHERE fname = :login AND password = :password";
                     $statement = $conn->prepare($sql);
                     $statement->execute(array(":login" => $FName, ":password" => $Pass));
@@ -39,14 +40,28 @@
                         
                         $sid= session_id();
                         $data = array("status" => "success", "sid" => $sid);
-
+                        
+                        
+                        
                     }else{
-                        include("home.php");
+                        $data = array("status" => "fail", "msg" => "Firstname/password not correct.");
                     }
 
                 }catch(PDOException $e){
                     $data = array("status" => "fail", "msg" => $e->getMessage());
                 }
+
+            }else{
+                $data = array("status" => "fail", "msg" => "Either login or password were absent.");
+            }
+            
+        }else{
+            $data = array("status" => "fail", "msg" => "Has to be an AJAX call.");
+        }
+
+    }else{
+        $data = array("status" => "fail", "msg" => "Error: only POST allowed.");
+    }
 
     echo json_encode($data, JSON_FORCE_OBJECT);
 

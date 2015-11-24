@@ -14,7 +14,11 @@ global $con;
 //OMG KMN
 
 	$arrayStorage = array();
-	$query = "SELECT * FROM `activity` WHERE price_range = '".$_POST['budget']."' AND time_of_day = '".$_POST['time']."'";
+	$query = "SELECT activity.ID,activity.act_name,activity.price_range,activity.time_of_day,activity.city,activity.imgSrc, company.ID AS compID 
+    FROM `activity` 
+    LEFT JOIN company ON company.activity_id = activity.ID
+    WHERE price_range = '".$_POST['budget']."' AND time_of_day = '".$_POST['time']."' LIMIT 3";
+    //echo $query;
 	$result = mysqli_query($con, $query);
 	if($result){
 		while($row = mysqli_fetch_array($result)){
@@ -22,6 +26,7 @@ global $con;
             //$arrayStorage[] = $row;
 			$activityInfo = array(
 				"ID" => $row['ID'],
+                "compID" => $row['compID'],
                 "act_name" => $row['act_name'],
 				"price_range" => $row['price_range'],
 				"time_of_day" => $row['time_of_day'],
@@ -43,7 +48,7 @@ function showCompany(){
     //echo json_encode("HEEEy");
 
     $arrayStorage = array();
-    $query = "SELECT * FROM `company` WHERE activity_id = '".$_POST['activityID']."'";
+    $query = "SELECT * FROM `company` WHERE ID = '".$_POST['compID']."'";
     $result = mysqli_query($con, $query);
 
     if($result){

@@ -5,78 +5,81 @@ $(document).ready(
             function(){
                 
                 var fn = $("#fname").val();
-                var ln = $("#lname").val();
                 var em = $("#email").val();
                 var pass = $("#pass").val();
                 var cpass = $("#cpass").val();
                 
-                if(fn==""||ln==""||em==""||pass==""||cpass==""){
+                var re = /[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}/igm;
+                
+                if(fn==""||em==""||pass==""||cpass==""){
                     $("#Msg1").html('<h1>Please fill in all blanks.</h1>');
                     $("#Msg1").css({"text-align":"center","margin-top":"1%", 'color':'orange'});
                     return false;
-                }else if(user.length < 5){
-                    $("#Msg1").html('Username need to be longer than 5 charecters.');
+                }else if(pass.length < 5){
+                    $("#Msg1").html('<h1>Password need to be longer than 5 characters.</h1>');
                     $("#Msg1").css({"text-align":"center","margin-top":"1%", 'color':'orange'});
                     return false;
+                }else if(pass !== cpass){
+                    $("#Msg1").html('<h1>Passwords do not match.</h1>');
+                    $("#Msg1").css({"text-align":"center","margin-top":"1%", 'color':'orange'});
+                    return false;
+                }else if(!re.test(em)){
+                   $("#Msg1").html('<h1>Email address is invalid.</h1>');
+                   $("#Msg1").css({"text-align":"center","margin-top":"1%", 'color':'orange'});
+                   return false;
                 }
 
             }
         );
-    ///////////////////
+   
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         
         
-                function getUserProfileInfo() {
+        function getUserProfileInfo() {
 
-                $.ajax({
-                    url: "get.php",
-                    type: "GET",
-                    dataType: "JSON",
-                    //data: {}, // could use this to ask for specific pieces of information (e.g., user profile, friends list, etc)
-                    success: function(resultData) {
-                        //console.log("Session GET returned: ", resultData);
+            $.ajax({
+                url: "get.php",
+                type: "GET",
+                dataType: "JSON", //data: {}, 
+                // could use this to ask for specific pieces of information (e.g., user profile, friends list, etc)
+                
+                success: function(resultData) {
+                    //console.log("Session GET returned: ", resultData);
 
-                        var status = resultData['status'];
-                        if(status == 'success') {
-
-
-                        /*    var userProfileText = "Welcome back ";
-
-                            var userProfile = resultData['userProfile'];
-                            //console.log(userProfile);
-
-                            userProfileText += userProfile['firstName'] + ", "
-                                + userProfile['lastName'] + " ("
-                                + userProfile['login'] + ")";
-                            /*for(var key in resultData) {
-                                if(key != 'status') {
-                                    userProfileData += key + ":" + resultData[key] + " ";
-                                }
-                            }*/
-
-
-                       /*     $("#infoMsg").text(userProfileText);
-                            $("#infoMsg").css("display", "block");
-                            $("#errorMsg").css("display", "none");
-                            $("#logoutForm").css("display", "block");
-                            $("#loginForm").css("display", "none"); */
-                             console.log("hey1");
-
-                        } else {
-                          /*  $("#logoutForm").css("display", "none");
-                            $("#loginForm").css("display", "block"); */
-                            console.log("hey");
-
+                    var status = resultData['status'];
+                    if(status == 'success') {
+                        
+                        
+                        var userProfileText = "";
+                        var userProfile = resultData['userProfile'];
+                        
+                        console.log(userProfile);
+                        
+                        for(var key in resultData) {
+                            if(key != 'status') {
+                                userProfileText += key + ":" + resultData[key] + " ";
+                            }
                         }
+                        
+                        $("#Msg2").text(userProfileText);
+                        
+                        console.log("hey1");
+                            
+                        window.location.href="home.php";
+                            
+                    } else {
+                        console.log("hey");
 
-                    },
+                    }
+
+                },
                     error: function(jqXHR, textStatus, errorThrown) {
                         console.log(jqXHR.statusText, textStatus);
                     }
-                });
+            });
 
-            }
+        }
 
-            // from: http://www.developerdrive.com/2013/04/turning-a-form-element-into-json-and-submiting-it-via-jquery/
             function ConvertFormToJSON(form){
                 var array = $(form).serializeArray();
                 var json = {};
@@ -88,12 +91,13 @@ $(document).ready(
                 return json;
             }
         
-        /////////////
-        function doLogin() {
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        
 
+        function doLogin() {
                 var formData = ConvertFormToJSON("#lg");
                 console.log("Login data to send: ", formData);
-
+                
                 $.ajax({
                     url: "check.php",
                     type: "POST",
@@ -104,19 +108,22 @@ $(document).ready(
 
                         var status = data['status'];
                         if(status == 'fail') {
-                            //$("#errorMsg").html(data['msg']);
-                            //$("#errorMsg").css("display", "block");
+                            
+                            console.log("hi");
+                            
+                            $("#Msg2").html('<h1>Your username/password incorrect.</h1>').css;
+                            $("#Msg2").css({"text-align":"center","margin-top":"1%", 'color':'orange'});
+                            return false;  
+                            
                         } else {
                             // get user data
                             getUserProfileInfo();
                             $('#lg').trigger("reset");
-
                         }
 
                     },
                     error: function(jqXHR, textStatus, errorThrown) {
-                        //console.log(jqXHR.statusText, textStatus, errorThrown);
-                        console.log(jqXHR.statusText, textStatus);
+                        console.log(jqXHR.statusText, textStatus, errorThrown);
                     }
                 });
 
@@ -132,7 +139,6 @@ $(document).ready(
         
         $("#splashLogin3").click(
             function(){
-                
                 var FName = $("#FName").val();
                 var Passwprd = $("#Password").val();
                 
@@ -146,30 +152,43 @@ $(document).ready(
                 
                 doLogin();
                 
-                /*
-                $.ajax({
-                        url: "check.php",
-                        type: "POST",
-                        dataType: "JSON",
-                        data:{
-                            fname: FName,
-                            pass: Password
-                        },
-                        success: function(data){
-                            console.log(data);
-                            if(data.status === true){
-                                window.location.replace("home.php");
-                            }else{
-                                alert("Try again please.");
-                            }
-                        }
-                    });
-                    */
-
-                
             }
         );
-      
-    }    
-      
+        
+        
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        
+        $("#logout").click(
+            function(){
+                var sendData = {logout: "true"};
+                console.log("Logout data to send: ", sendData);
+
+                $.ajax({
+                    url: "logout.php",
+                    type: "POST",
+                    dataType: "JSON",
+                    data: sendData,
+                    success: function(data) {
+                        console.log("Logout data returned: ", data);
+                        var status = data['status'];
+                        if(status == 'fail') {
+                            console.log("nope!");
+                        } else {
+                            window.location.href="index.php";
+                        }
+                    }
+                });
+
+            }
+        );
+
+              
+            
+
+    }
 );
+        
+      
+        
+    
+      

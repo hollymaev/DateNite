@@ -1,7 +1,11 @@
 $(document).ready(
     function(){
+        
         $("#signup_page").hide();
         $("#login_page").hide();
+        
+        
+        /****** Splash Page ******/
         
         $("#splashLogin1").click(
             function(){
@@ -19,6 +23,15 @@ $(document).ready(
             }
         );
         
+        $("#splashGuest1").click(
+            function(){
+                location.href = "home.php";
+            }
+        );
+        
+        
+        /****** Login Page ******/
+        
         $("#splashLogin2").click(
             function(){
                 $("#splash_page").fadeOut();
@@ -27,6 +40,24 @@ $(document).ready(
             }
         );
         
+        $("#splashSignup2").click(
+            function(){
+                $.post(
+                    //$("#su").attr("action"),
+                    //$("#su:input").serializeArray(),
+                );
+            }
+        );
+        
+        $("#splashGuest2").click(
+            function(){
+                location.href = "home.php";
+            }
+        );
+        
+                
+        /****** Signup Page ******/
+                
         $("#splashLogin3").click(
             function(){
                 $("#splash_page").fadeOut();
@@ -40,56 +71,8 @@ $(document).ready(
                 $("#splash_page").fadeOut();
                 $("#login_page").fadeOut();
                 $("#signup_page").fadeIn();
-                location.href = "home.php";
             }
         );
-        
-        $("#splashGuest1").click(
-            function(){
-                location.href = "home.php";
-            }
-        );
-        
-         $("#splashGuest2").click(
-            function(){
-                location.href = "home.php";
-            }
-        );
-        
-        $("#splashSignup2").click(
-            function(){
-                $.post($("#su").attr("action"),
-                    $("#su:input").serializeArray(),
-                    function(info){
-                        $("#errMsg").innerHTML(info);
-                        $("#errMsg").css({"text-align":"center","margin-top":"1%", 'color':'white'});
-                    }
-                    
-                    /*
-                    $.ajax({
-                        url: "check.php",
-                        type: "POST",
-                        dataType: "JSON",
-                        data:{
-                            fname: fname,
-                            pass: pass,
-                        },
-                        success: function(data){
-                            console.log(data);
-                            if(data.status === true){
-                                window.location.replace("home.php");
-                            }else{
-                                alert("Try again please.");
-                            }
-                        }
-                    });
-                    */
                 
-                );
-            }
-        );
-        
-        
-
     }
 );
