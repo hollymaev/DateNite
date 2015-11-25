@@ -86,11 +86,11 @@
                     <div class="col-xs-1 col-md-1" id="budget">
                         <div class="row">
                         <input type="radio" name="budget" id="Low" value="Low">
-                        <label for="low"><img class="budicon1" src="css/icons/budget/icon_budget_l_resize.png"/></label>
+                        <label for="Low"><img class="budicon1" src="css/icons/budget/icon_budget_l_resize.png"/></label>
                         </div>
 
                         <div class="row">
-                        <input type="radio" name="budget" id="Mid" value="Mid">
+                        <input type="radio" name="budget" id="Mid"   value="Mid">
                         <label for="Mid"><img class="budicon2" src="css/icons/budget/icon_budget_m_resize.png"/></label>
                         </div>
 
@@ -128,9 +128,10 @@
     
     <SCRIPT SRC = "http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></SCRIPT>
     <SCRIPT SRC = "javascript/javascript_home.js" TYPE="TEXT/JAVASCRIPT"></SCRIPT>
-    <script src="slidebars/slidebars.js"></script>
-    
-    
+    <script src="slidebars/slidebars.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&callback=initialize"></script>
+<script>
+
 </body>
         
     

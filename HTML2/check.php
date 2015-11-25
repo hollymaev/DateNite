@@ -17,12 +17,16 @@
 
                 $FName = $_POST["lgfn"];
                 $Pass = $_POST["lgpass"];
-                
+                /*
                 $servername = "localhost";
                 $dblogin = "datenit2_holly";
                 $dbpassword = "2425475051";
                 $dbname = "datenit2_datenite";
-                    
+                */
+                $servername = "localhost";
+                $dblogin = "root";
+                $dbpassword = "root";
+                $dbname = "datenite";
                 try {
                     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $dblogin, $dbpassword);
                     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

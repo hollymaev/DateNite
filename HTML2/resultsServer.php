@@ -58,7 +58,9 @@ function showCompany(){
                 "address" => $row['address'],
                 "phone" => $row['phone_number'],
                 "website" => $row['website'],
-                "description" => $row['description']
+                "description" => $row['description'],
+                "latitude" => $row['latitude'],
+                "longitude" => $row['longitude']
             );
             
             array_push($arrayStorage, $companyInfo);
