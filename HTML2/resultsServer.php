@@ -72,7 +72,14 @@ function showCompany(){
 function saveCompany(){
     global $con;
     
-    $query = "INSERT INTO prefs ('user_id','act_id','comp_id') VALUES ('','','')";
+    $query = "INSERT INTO `prefs` (`user_id`,`act_id`,`comp_id`) VALUES ('".$_POST['user_id']."','".$_POST['act_id']."','".$_POST['comp_id']."')";
+    $result = mysqli_query($con, $query);
+    
+    if($result){
+        echo json_encode($result);
+    } else{
+        echo json_encode ($result);
+    }
     
 }
 
