@@ -28,7 +28,7 @@
                 if($result){
                     include("home.php");
                 }else{
-                    echo 'Failed!';
+                    echo json_encode'Failed!';
                 }
             }
                 
