@@ -9,21 +9,18 @@ window.onload = function () {
                     lng:-121
                 },
                 zoom:15
-            });
-            /*
-            for calling the long and lat from database called from the global array markers
-            for (var i in markers){
-            
+            }); 
+ //for Google Maps Marker
+// set at a default lat and lng trying to make it dynamic from db
                 var marker = new google.maps.Marker({
                     position:{
-                        lat: markers[i].lat,
-                        lng: markers[i].long
+                        lat: 51,
+                        lng: -121
                     },
                     zoom: 13,
                     map: map
                 });
-            }*/
-    
+  
     var infoWindow = new google.maps.InfoWindow({map: map});
 
       if (navigator.geolocation) {
@@ -91,7 +88,7 @@ var goBut = document.getElementById("goBut");
 				type:"post",
 				success:function(resp){
                     console.log(resp);
-                    var actDiv = $
+                    //var actDiv = $
                     var results = resp;
                     //console.log(results);                
                     for(var i in results)

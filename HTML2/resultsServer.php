@@ -69,5 +69,12 @@ function showCompany(){
     echo json_encode($arrayStorage);
 }
 
+function saveCompany(){
+    global $con;
+    
+    $query = "INSERT INTO prefs ('user_id','act_id','comp_id') VALUES ('','','')";
+    
+}
+
 
 ?>

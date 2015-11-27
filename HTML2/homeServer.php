@@ -61,6 +61,8 @@ if($_POST['mode'] == 1){
     //renderJSON();
 } else if($_POST['mode'] == 2){
 	showCompany();	
+} else if($_GET['mode'] == 3){
+    saveCompany();
 }
 
 ?>
