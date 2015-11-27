@@ -117,6 +117,7 @@
                 
                 <div class="span"id="infoResults">
                     More Information!
+                    <button id="save">Save</button>
                 </div>
                 
             </div>
@@ -129,7 +130,7 @@
     <SCRIPT SRC = "http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></SCRIPT>
     <SCRIPT SRC = "javascript/javascript_home.js" TYPE="TEXT/JAVASCRIPT"></SCRIPT>
     <script src="slidebars/slidebars.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&callback=initialize"></script>
+<script src="https://maps.googleapis.com/maps/api/js?"></script>
 <script>
 
 </body>

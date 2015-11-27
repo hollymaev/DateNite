@@ -1,4 +1,5 @@
 window.onload = function () {
+        markers=[];
         function initMap(){
             //google opbejct has finished leading  on my page
             var map = new google.maps.Map(document.getElementById("map"),
@@ -7,61 +8,53 @@ window.onload = function () {
                     lat:51,
                     lng:-121
                 },
-                zoom:7
-            }
-        );
-        
-
-            var new_info = new google.maps.InfoWindow({
-                content: "<img src='http://media.animevice.com/uploads/0/69/545801-default_image__earth_dragon_balls__object_page__large.png'>"
+                zoom:15
             });
-        
-            var info = new google.maps.InfoWindow({
-                content:"hey girl"
-            });
-            //new_info.open(map,marker);
-        }
-               var  newMarker = function(lat,long){
-
-            var new_mark = new google.maps.Marker({
-              map:map,
-                icon: {
-                        url:"https://upload.wikimedia.org/wikipedia/en/e/ec/Soccer_ball.svg",
-                        size:{
-                            width:50,
-                            height:50
-                        },
-                        scaledSize:{
-                            width:50,
-                            height:50
-                        }
-                      }
-            });
+            /*
+            for calling the long and lat from database called from the global array markers
+            for (var i in markers){
+            
                 var marker = new google.maps.Marker({
-                position:{
-                    lat:lat,
-                    lng: long
-                },
-                map: map,
-                title: "my marker",
-                icon: {
-                        url:"https://upload.wikimedia.org/wikipedia/en/e/ec/Soccer_ball.svg",
-                        size:{
-                            width:250,
-                            height:350
-                        },
-                        scaledSize:{
-                            width:250,
-                            height:350
-                        }
-                      }
-            });}
+                    position:{
+                        lat: markers[i].lat,
+                        lng: markers[i].long
+                    },
+                    zoom: 13,
+                    map: map
+                });
+            }*/
+    
+    var infoWindow = new google.maps.InfoWindow({map: map});
+
+      if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      var pos = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude,
+      };
+
+      infoWindow.setPosition(pos);
+      infoWindow.setContent('Here You Are!');
+      map.setCenter(pos);
+    }, function() {
+      handleLocationError(true, infoWindow, map.getCenter());
+    });
+  } else {
+    // Browser doesn't support Geolocation
+    handleLocationError(false, infoWindow, map.getCenter());
+  }
+
+}
+
+/*Maps*/
+
 "use strict";
 //for icons
 $('#time input:radio').addClass('input_hidden');
 $('#budget input:radio').addClass('input_hidden');
 $('#budget label').click(function(){
-    $(this).addClass('selected').siblings().removeClass('selected');
+
+$(this).addClass('selected').siblings().removeClass('selected');
 });
           
 var goBut = document.getElementById("goBut");
@@ -143,32 +136,49 @@ var goBut = document.getElementById("goBut");
                     var company = company;
                     var lat = company[0].latitude;
                     var long = company[0].longitude;
-                    console.log(lat, long);
-                   newMarker(lat,long);
+                    var lnglat = long+", "+lat;
+                    markers.push[long];
+                    markers.push[lat];
+                    
+                    console.log(lnglat);
+                    
+                    
                     for(var i in company){
                             
-                        $("#infoResults").append("<div class='companyinfo'><h3>"+company[i].company+"</h3><p>"+company[i].address+"<br>"+company[i].phone+"<br>"+company[i].website+"<br><br>"+company[i].description+"</p><img src='css/icon/save-star-before_icon.png'><div id='map'>ndfsln</div></div>");
+                        $("#infoResults").append("<div class='companyinfo'><h3>"+company[i].company+"</h3><p>"+company[i].address+"<br>"+company[i].phone+"<br><a href='"+company[i].website+"' target=_blank>"+company[i].website+"</a><br><br>"+company[i].description+"</p><div id='map'></div></div>");
                     }
                
                     //console.log(document.getElementById('map').val);
-initMap();    
+                    initMap();    
 
                 
                 }
 
                     });
                 });           
-                    }
-     
+                    }     
 });
-
-
 
     }; //end of button click function
 var backBut = document.getElementById("return");
 backBut.onclick = function(){
     //i know that i have to actually hide things but just bare with me here
     location.href="home.php";
+}
+/*TO SAVE THE OPTION*/
+var saveBut = document.getElementById('save');
+saveBut.onclick = function(){
+    $.ajax({
+        url:"resultsServer.php",
+        dataType: "json",
+        data:{
+            mode: 3
+        },
+        type:"get",
+        success:function(save){
+            console.log(save);
+        }
+    });
 }
 
 };
