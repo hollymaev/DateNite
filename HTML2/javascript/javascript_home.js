@@ -54,9 +54,8 @@ window.onload = function() {
 
                 $(".activity").click(function() {
                     var actID = $(this).attr("id");
-                    var actualID = parseInt(actID);
 
-                    
+                    var actualID = parseInt(actID);
                     console.log(actualID);
                     $("#ResultSpan").css("display", "none");
                     $(".activity").css("display", "none");
@@ -75,7 +74,7 @@ window.onload = function() {
                             for (var i in company) {
 
                                 $("#infoResults").append(
-                                    "<div class='companyinfo'><h3>" + company[i].company + "</h3><p>" +company[i].address+ "<br>" +company[i].phone+ "<br><a href='" +company[i].website+ "' target=_blank>" +company[i].website+ "</a><br><br>" +company[i].description+ "</p><div id='map'></div></div>"
+                                    "<div class='companyinfo'><h3>" + company[i].company + "</h3><p>" +company[i].address+ "<br>" + company[i].phone + "<br><a href='" + company[i].website + "' target=_blank>" + company[i].website + "</a><br><br>" + company[i].description + "</p><div id='map'></div></div>"
                                 );
                                 
                                 //Calling the initMap function
@@ -93,15 +92,17 @@ window.onload = function() {
                                         zoom: 11
                                     });
                                     
+                                    console.log(company[i]);
                                     //FOR GETTING COORDINATES FROM DB//
-                                    var lat = parseFloat(company[i].latitude);
+                                    var lata = parseFloat(company[i].latitude);
                                     var long = parseFloat(company[i].longitude);
                                     var latlng = {
-                                        lat: lat, 
+                                        lat: lata, 
                                         lng: long
                                     };
 
                                     console.log(latlng);
+                                    map.panTo(latlng);
                                     
                                     //MARKER FOR COORDINATES FROM DB//
                                     var marker = new google.maps.Marker({
@@ -125,7 +126,7 @@ window.onload = function() {
 
                                             infoWindow.setPosition(pos);
                                             infoWindow.setContent('Here You Are!');
-                                            map.setCenter(pos);
+                                            //map.setCenter(pos);
                                         }, function() {
                                             handleLocationError(true, infoWindow, map.getCenter());
                                         });
@@ -151,8 +152,7 @@ window.onload = function() {
                             dataType: "json",
                             data: {
                                 mode: 3,
-                                user_id: 2,
-                                act_id: 1,
+                                user_id: 1,
                                 comp_id: 3
                             },
                             type: "post",
