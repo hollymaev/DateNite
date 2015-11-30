@@ -39,7 +39,8 @@
                     if(count($row) > 0) {
 
                         $_SESSION['lgfn'] = $FName;
-                        $_SESSION['lgpass'] = $Pass;
+                        //$_SESSION['lgpass'] = $Pass;
+                        $_SESSION['ID'] = $row[0]['ID'];
                         $_SESSION['loggedin'] = true;
                         
                         $sid= session_id();
