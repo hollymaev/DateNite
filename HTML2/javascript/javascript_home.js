@@ -83,19 +83,15 @@ window.onload = function() {
                         success: function(company) {
                             console.log(company);
 
-                            var company = company;
+
 
                             for (var i in company) {
 
                                 $("#infoResults").append("<div class='companyinfo'><h3>" + company[i].company + "</h3><p>" + company[i].address + "<br>" + company[i].phone + "<br><a href='" + company[i].website + "' target=_blank>" + company[i].website + "</a><br><br>" + company[i].description + "</p><div id='map'></div></div>");
                                 initMap();
-                                
-                                //HERE IS WHERE IM MESSING UP PROBABLY
-                                var lat = company[i].latitude;
-                                var long = company[i].longitude;
-                                var latlng = new google.maps.LatLng(lat, long);
-                                console.log(latlng);
-                                //HERE IS WHERE IM MESSING UP
+                                    
+                                    
+                             
                                 
                                 function initMap() {
                                     //google opbejct has finished leading  on my page
@@ -107,12 +103,7 @@ window.onload = function() {
                                         zoom: 11
                                     });
 
-                                    var marker = new google.maps.Marker({
-                                        position: latlng,
-                                        zoom: 13,
-                                        map: map
-                                    });
-                                    console.log(marker);
+                                    //console.log(latlng);
 
                                     var infoWindow = new google.maps.InfoWindow({
                                         map: map
@@ -122,7 +113,7 @@ window.onload = function() {
                                         navigator.geolocation.getCurrentPosition(function(position) {
                                             var pos = {
                                                 lat: position.coords.latitude,
-                                                lng: position.coords.longitude,
+                                                lng: position.coords.longitude
                                             };
 
                                             infoWindow.setPosition(pos);
@@ -135,6 +126,22 @@ window.onload = function() {
                                         // Browser doesn't support Geolocation
                                         handleLocationError(false, infoWindow, map.getCenter());
                                     }
+                                    
+                                    //FOR GETTING COORDINATES FROM FB
+
+                                    var lat = parseInt(company[i].latitude);
+                                    var long = parseInt(company[i].longitude);
+                                    var latlng = {lat:lat, lng: long};
+                                    console.log(parseInt(lat));
+                                    console.log(parseInt(long));
+                                    console.log(latlng);
+                                    
+                                    var marker = new google.maps.Marker({
+                                        position: latlng,
+                                        zoom: 13,
+                                        map: map
+                                    });
+                                    console.log(marker);
 
                                 }
 
