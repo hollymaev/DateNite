@@ -18,18 +18,13 @@ window.onload = function() {
         $("#goBut").css("display", "none");
         $("#blank").css("display", "none");
         $("#optLine").css("display", "none");
-        //$("#background").css("url","none");
-        //$("#arrowicons").css("display", "inline-block");
-        //to create div for result
-        //to create div for result
+
 
         var budgetInput = document.querySelector("input[name='budget']:checked").value;
         console.log(budgetInput);
         var timeInput = document.querySelector("input[name='time']:checked").value;
         console.log(timeInput);
-        //hard coded the activity ID under the company table
-        //need to make it dynamic to match the user's inputs
-        //var actID = 1;
+
         //for getting user inputs and posting results
         $.ajax({
             url: "resultsServer.php",
@@ -44,30 +39,24 @@ window.onload = function() {
                 console.log(resp);
                 //var actDiv = $
                 var results = resp;
-                //console.log(results);                
+                //console.log(results);
+                
+                $("#grey").append("<p>Results For: "+timeInput+" and "+budgetInput+"</p>");
+                
                 for (var i in results) {
                     var newID = results[i].compID;
 
                     $("#grey").append(
 
                         "<div class='activity' style='background:url(" + results[i].imgSrc + ");' id='" + newID + "'><h4>" + results[i].act_name + "</h4><p>Location: " + results[i].city + "<br>Budget: " + results[i].price_range + "<br>Time of Day: " + results[i].time_of_day + "</p></div>");
-
-
-                    //$(".activity").css("background","linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2));");
-                    //parseint when calling the id
-                    //activity.attr("id", results[i].ID);
-
-                    //$(".activity").css("background-image","url('" + results[i].imgSrc + "')");
-
-                    //when appending the images
-                    //$("#activityResults").html("<div class='activity'>" + resp + "</div>");
+                
                 }
-
 
                 $(".activity").click(function() {
                     var actID = $(this).attr("id");
-
                     var actualID = parseInt(actID);
+
+                    
                     console.log(actualID);
                     $("#ResultSpan").css("display", "none");
                     $(".activity").css("display", "none");
@@ -83,18 +72,19 @@ window.onload = function() {
                         success: function(company) {
                             console.log(company);
 
-
-
                             for (var i in company) {
 
-                                $("#infoResults").append("<div class='companyinfo'><h3>" + company[i].company + "</h3><p>" + company[i].address + "<br>" + company[i].phone + "<br><a href='" + company[i].website + "' target=_blank>" + company[i].website + "</a><br><br>" + company[i].description + "</p><div id='map'></div></div>");
-                                initMap();
-                                    
-                                    
-                             
+                                $("#infoResults").append(
+                                    "<div class='companyinfo'><h3>" + company[i].company + "</h3><p>" +company[i].address+ "<br>" +company[i].phone+ "<br><a href='" +company[i].website+ "' target=_blank>" +company[i].website+ "</a><br><br>" +company[i].description+ "</p><div id='map'></div></div>"
+                                );
                                 
+                                //Calling the initMap function
+                                initMap();    
+                                
+                                //map is inside the company for loop
                                 function initMap() {
-                                    //google opbejct has finished leading  on my page
+                                    
+                                    //INITMAP//
                                     var map = new google.maps.Map(document.getElementById("map"), {
                                         center: {
                                             lat: 51,
@@ -102,13 +92,30 @@ window.onload = function() {
                                         },
                                         zoom: 11
                                     });
+                                    
+                                    //FOR GETTING COORDINATES FROM DB//
+                                    var lat = parseFloat(company[i].latitude);
+                                    var long = parseFloat(company[i].longitude);
+                                    var latlng = {
+                                        lat: lat, 
+                                        lng: long
+                                    };
 
-                                    //console.log(latlng);
-
+                                    console.log(latlng);
+                                    
+                                    //MARKER FOR COORDINATES FROM DB//
+                                    var marker = new google.maps.Marker({
+                                        position: latlng,
+                                        zoom: 13,
+                                        map: map
+                                    });
+                                    
+                                    console.log(marker.position);
+                                    
+                                    //GEOLOCATION//
                                     var infoWindow = new google.maps.InfoWindow({
                                         map: map
                                     });
-
                                     if (navigator.geolocation) {
                                         navigator.geolocation.getCurrentPosition(function(position) {
                                             var pos = {
@@ -123,37 +130,19 @@ window.onload = function() {
                                             handleLocationError(true, infoWindow, map.getCenter());
                                         });
                                     } else {
-                                        // Browser doesn't support Geolocation
                                         handleLocationError(false, infoWindow, map.getCenter());
                                     }
-                                    
-                                    //FOR GETTING COORDINATES FROM FB
-
-                                    var lat = parseInt(company[i].latitude);
-                                    var long = parseInt(company[i].longitude);
-                                    var latlng = {lat:lat, lng: long};
-                                    console.log(parseInt(lat));
-                                    console.log(parseInt(long));
-                                    console.log(latlng);
-                                    
-                                    var marker = new google.maps.Marker({
-                                        position: latlng,
-                                        zoom: 13,
-                                        map: map
-                                    });
-                                    console.log(marker);
 
                                 }
 
                             }
 
-                            //console.log(document.getElementById('map').val);
-
-
                         }
 
 
                     });
+                    
+                    //SAVE FUNCTION
                     var saveBut = document.getElementById('save');
                     saveBut.onclick = function() {
                         console.log('WORKS');
@@ -180,11 +169,12 @@ window.onload = function() {
         });
 
     }; //end of button click function
+    
+    //BACK BUTTON CLICK OUTSIDE OF GO CLICK FUNCTION
     var backBut = document.getElementById("return");
     backBut.onclick = function() {
             //i know that i have to actually hide things but just bare with me here
             location.href = "home.php";
         }
-        /*TO SAVE THE OPTION*/
 
 };
