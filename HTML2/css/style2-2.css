@@ -3,6 +3,7 @@
   and (max-device-width: 627px) 
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: portrait) {}
+
 html {
     height: 100%;
     width: 100%; 
@@ -12,6 +13,24 @@ body {
     height: 100%;
     width: 100%; 
 } 
+
+h1{
+    text-align: center;
+    font-size: 80pt;
+    font-family: 'Gill Sans MT', sans-serif;
+    font-weight:200;
+    color: #fff;
+    z-index: 5;
+    }
+
+.s {
+    text-align: center;
+    font-size: 60pt;
+    font-family: 'Gill Sans MT', sans-serif;
+    font-weight: 100;
+    color:#fff;
+    z-index: 5;
+}
 
 h3{
     text-align: center;
@@ -24,7 +43,7 @@ h3{
 
 div {
     font-size: 14pt;
-    font-family: 'Gill Sans', sans-serif;
+    font-family: 'Gill Sans MT', sans-serif;
     font-weight: 100;
     color:#fff;
 } 
@@ -191,8 +210,6 @@ div {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 100vh;
-    width: auto;
   
 }
 
@@ -261,6 +278,7 @@ label img{
 #activityResults{
     height: 500px;
     width: 500px;   
+    background-color: aqua;
     z-index: 5;
     display: none;
 
@@ -285,52 +303,16 @@ display: none;
 }
 
 #infoResults{
-margin-right: auto;
-margin-left: auto;
 display:none;
-width: 80vw;
-height: 50vh;
+width: 70vw;
+height: 70vh;
 background-color: dimgray;
 }
 
 .companyinfo{
-padding: 50px;
-display: block;
-position: relative;
-width: 80vw;
-height: 35vh;
-top: 40px;
-margin-right: auto;
-margin-left: auto;
-background-color: rgba(0,0,0,.5);
-}
-.companyinfo2{
-padding: 50px;
-display: block;
-position: relative;
-width: 80vw;
-top: 50px;
+width: auto;
 height: auto;
-margin-right: auto;
-margin-left: auto;
-background-color: rgba(0,0,0,.5);
-}
-.pcompany{
-font-size: 70px;
-}
-.resultsDesc{
-    text-align: center;
-}
-#star:hover{
-    cursor: pointer;
-}
-#back{
-    background-color: rgba(0,0,0,.5);
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-right: 30px;
-    padding-left: 30px;
-    font-size: 30px;
+background-color: darkgray;
 }
 /*map*/
 #map{
@@ -338,9 +320,9 @@ font-size: 70px;
     height: 300px ;
     background-color: darkgrey;
 }
-.homeInputs{
-    position: absolute;
-}
+
+/* menu + header */
+
 #logo {
     height:180px;
     weight:180px;
@@ -395,7 +377,4 @@ a:visited {
     vertical-align: middle;
     margin-bottom: 0.75em;
     padding-right:5%;
-}
-.activity p{
-    padding-top: 40px;
 }

@@ -14,17 +14,49 @@
 <body>
     <div id="background" class=".container-fluid "> 
         
-        <!------------------- header ------------------->
         
-        <div id="header" class="row">
+<!---------------- sidebar content  --------------->
+       
+        <div id= "c" class="sb-slidebar sb-left sb-style-overlay">
+            <div class="s">WELCOME</div>
+                <img class="profilepic" src="css/icons/profile_image/icon_icecream_renew.png">
+              <br/>
+           <span class="text"> USER ID </span>
+              <br/><br/><br/>
+              <br/><br/><br/>
+    
+                <div id="myplans">
+                    <img class="side" src="css/icons/sidebar/icon_plan_resize.png">
+                    <span><a class="text" href="plans.php"> MY PLANS </a></span>
+                </div>
+                
+                    <br/><br/><br/>
+    
+                <div id="settings">
+                <img class="side" src="css/icons/sidebar/icon_setting_resize.png">
+                <span><a class="text" href="settings.php"> SETTINGS </a></span>
+                </div>
+           
+                    <br/><br/><br/>
+            
+                 <div id="login">
+                 <img class="side" src="css/icons/sidebar/icon_login_resize.png">
+                 <span><a class="text" href=""> LOGIN </a></span>
+                </div>
+            </div>
+        <div id="sb-site">
+        
+<!------------------- header ------------------->
+        
+        <div id="header">
                 <ul>
                     <img src="css/icon/side-bar_icon.png" class="sb-toggle-left" id="menu">
                     <img src="css/images/logo-light.png" id="logo2" alt="LOGO">
                 </ul> 
+            
         </div>
         
-        <div id="grad1"></div>
-        
+            <div id="grad1"></div>
         
         <!------------------- content ------------------->
         
@@ -39,32 +71,30 @@
             <div id="grey" class="row">
                 
                 <img id="optLine" class="col-xs-6 col-md-6" src="css/icon/options-line.png">
-        
+                
+                <div class="span" id="ResultSpan">What Do You Think?</div>
+                
                 <div class="row">
                 
                     <div class="col-xs-3 col-md-3"></div>
 
                     <div class="col-xs-1 col-md-1" id="time">
                         <div class="row">
-                            <p class="row">Morning</p>
                         <input type="radio" name="time" id="Morning" value="Morning">
                         <label for="Morning"><img  class="timeicon1" src="css/icons/time/icon_time_m2_resize.png"/></label>
                         </div>
 
                         <div class="row">
-                            <p class="row">Afternoon</p>
                         <input type="radio" name="time" id="Afternoon" value="Afternoon">
                         <label for="Afternoon"><img  class="timeicon2" src="css/icons/time/icon_time_a2_resize.png"/></label>
                         </div>
 
                         <div class="row">
-                            <p class="row">Evening</p>
                         <input type="radio" name="time" id="Evening" value="Evening">
                         <label for="Evening"><img  class="timeicon3" src="css/icons/time/icon_time_e2_resize.png"/></label>
                         </div>
 
                         <div class="row">
-                            <p class="row">All Day</p>
                         <input type="radio" name="time" id="All" value="All">
                         <label for="All"><img  class="timeicon4" src="css/icons/time/icon_time_ad2_resize.png"/></label>
                         </div>
@@ -74,19 +104,16 @@
 
                     <div class="col-xs-1 col-md-1" id="budget">
                         <div class="row">
-                            <p class="row">$0-$15</p>
                         <input type="radio" name="budget" id="Low" value="Low">
                         <label for="Low"><img class="budicon1" src="css/icons/budget/icon_budget_l_resize.png"/></label>
                         </div>
 
                         <div class="row">
-                            <p class="row">$16-$30</p>
                         <input type="radio" name="budget" id="Mid"   value="Mid">
                         <label for="Mid"><img class="budicon2" src="css/icons/budget/icon_budget_m_resize.png"/></label>
                         </div>
 
                         <div class="row">
-                            <p class="homeInputs2">$31-$++</p>
                         <input type="radio" name="budget" id="High" value="High">
                         <label for="High"><img class="budicon3" src="css/icons/budget/icon_budget_h_resize.png"/></label>
                         </div>
@@ -104,10 +131,11 @@
                 </div>
                 
                 <div id="arrowicons">
-                    <i id="return" class="fa fa-angle-left fa-4x"></i>
+                    <i id="return" class="fa fa-arrow-left fa-5x"></i>
                 </div>
                 
                 <div class="span"id="infoResults">
+                    More Information!
                     <button id="save">Save</button>
                 </div>
                 
@@ -122,7 +150,6 @@
     <SCRIPT SRC = "javascript/javascript_home.js" TYPE="TEXT/JAVASCRIPT"></SCRIPT>
     <script src="slidebars/slidebars.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?"></script>
-<script>
 
 </body>
         

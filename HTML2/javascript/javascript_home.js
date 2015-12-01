@@ -8,16 +8,17 @@ window.onload = function() {
         $(this).addClass('selected').siblings().removeClass('selected');
     });
 
+        
     var goBut = document.getElementById("goBut");
 
     goBut.onclick = function() {
-        $("#arrowicons").css("display", "block");
-        $("#ResultSpan").css("display", "block");
-        $("#budget").css("display", "none");
-        $("#time").css("display", "none");
-        $("#goBut").css("display", "none");
-        $("#blank").css("display", "none");
-        $("#optLine").css("display", "none");
+        $("#arrowicons").fadeIn(500);
+        
+        $("#budget").fadeOut(500);
+        $("#time").fadeOut(500);
+        $("#goBut").fadeOut(500);
+        $("#blank").fadeOut(500);
+        $("#optLine").fadeOut(500);
 
 
         var budgetInput = document.querySelector("input[name='budget']:checked").value;
@@ -41,25 +42,27 @@ window.onload = function() {
                 var results = resp;
                 //console.log(results);
                 
-                $("#grey").append("<p>Results For: "+timeInput+" and "+budgetInput+"</p>");
+                $("#grey").append("<h1 class='resultsDesc'>Results For: "+timeInput+" and "+budgetInput+"</h1>");
                 
                 for (var i in results) {
                     var newID = results[i].compID;
 
                     $("#grey").append(
 
-                        "<div class='activity' style='background:url(" + results[i].imgSrc + ");' id='" + newID + "'><h4>" + results[i].act_name + "</h4><p>Location: " + results[i].city + "<br>Budget: " + results[i].price_range + "<br>Time of Day: " + results[i].time_of_day + "</p></div>");
-                
+                        "<h2>" + results[i].act_name + "</h2><div class='activity' style='background:url(" + results[i].imgSrc + ");' id='" + newID + "'><p>Location: " + results[i].city + "<br>Budget: " + results[i].price_range + "<br>Time of Day: " + results[i].time_of_day + "</p></div>");
                 }
+              
 
                 $(".activity").click(function() {
                     var actID = $(this).attr("id");
 
                     var actualID = parseInt(actID);
                     console.log(actualID);
-                    $("#ResultSpan").css("display", "none");
-                    $(".activity").css("display", "none");
-                    $("#infoResults").css("display", "block");
+                    $(".activity").hide();
+                    $("h2").hide();
+                    $("#save").css("display", "block");
+                    $("#grey").css("display","none");
+                    
                     $.ajax({
                         url: "resultsServer.php",
                         dataType: "json",
@@ -73,8 +76,8 @@ window.onload = function() {
 
                             for (var i in company) {
 
-                                $("#infoResults").append(
-                                    "<div class='companyinfo'><h3>" + company[i].company + "</h3><p>" +company[i].address+ "<br>" + company[i].phone + "<br><a href='" + company[i].website + "' target=_blank>" + company[i].website + "</a><br><br>" + company[i].description + "</p><div id='map'></div></div>"
+                                $("#background").append(
+                                    "<div class='companyinfo2'><h1>" + company[i].company + "  <i id='star' class='fa fa-star-o fa-2x'></i></h1><p class='pcompany'><h2>" + company[i].description + "</h2></div><br><div class='companyinfo'>Address: " +company[i].address+ "<br>Phone Number: " + company[i].phone + "<br>Website: <a href='" + company[i].website + "' target=_blank>" + company[i].website + "</a><br><br></p><div id='map'></div></div><button id='back'>Back</button>"
                                 );
                                 
                                 //Calling the initMap function
@@ -152,7 +155,7 @@ window.onload = function() {
                             dataType: "json",
                             data: {
                                 mode: 3,
-                                user_id: 1,
+                                user_id: 3,
                                 comp_id: 3
                             },
                             type: "post",
