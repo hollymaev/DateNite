@@ -60,7 +60,6 @@ window.onload = function() {
                     console.log(actualID);
                     $(".activity").hide();
                     $("h2").hide();
-                    $("#save").css("display", "block");
                     $("#grey").css("display","none");
                     
                     $.ajax({
@@ -77,17 +76,49 @@ window.onload = function() {
                             for (var i in company) {
 
                                 $("#background").append(
-                                    "<div class='companyinfo2'><h1>" + company[i].company + "  <i id='star' class='fa fa-star-o fa-2x'></i></h1><p class='pcompany'><h2>" + company[i].description + "</h2></div><br><div class='companyinfo'>Address: " +company[i].address+ "<br>Phone Number: " + company[i].phone + "<br>Website: <a href='" + company[i].website + "' target=_blank>" + company[i].website + "</a><br><br></p><div id='map'></div></div><button id='back'>Back</button>"
+                                    "<div class='companyinfo2'><h1>" + company[i].company + "  <i id='save' class='fa fa-star-o fa-2x'></i></h1><p class='pcompany'><h2>" + company[i].description + "</h2></div><br><div class='companyinfo'>Address: " +company[i].address+ "<br>Phone Number: " + company[i].phone + "<br>Website: <a href='" + company[i].website + "' target=_blank>" + company[i].website + "</a><br><br></p><div id='map'></div><br><button id='back'>Back</button></div>"
                                 );
                                 
                                 //Calling the initMap function
                                 initMap();    
                                 
+                        //SAVE FUNCTION
+                        var saveBut = document.getElementById('save');
+                        saveBut.onclick = function() {
+                            console.log('WORKS');
+                            $.ajax({
+                                url: "resultsServer.php",
+                                dataType: "json",
+                                data: {
+                                    mode: 3,
+                                    user_id: 3,
+                                    comp_id: 3
+                                },
+                                type: "post",
+                                success: function(save) {
+                                    alert(save);
+                                }
+
+
+                            });
+                        }
+                        
+                        var backbut2 = document.getElementById('back');
+                        backbut2.onclick = function(){
+                            $(".activity").show();
+                            $("h2").show();
+                            $("#grey").css("display","block");
+                            
+                            $(".companyinfo2").css("display","none");
+                            $(".companyinfo").css("display","none");
+                            
+                        }
+                                
                                 //map is inside the company for loop
                                 function initMap() {
                                     
                                     //INITMAP//
-                                    var map = new google.maps.Map(document.getElementById("map"), {
+                                    var map = new google.maps.Map(document.getElementById("map"),                                     {
                                         center: {
                                             lat: 51,
                                             lng: -121
@@ -146,27 +177,6 @@ window.onload = function() {
 
                     });
                     
-                    //SAVE FUNCTION
-                    var saveBut = document.getElementById('save');
-                    saveBut.onclick = function() {
-                        console.log('WORKS');
-                        $.ajax({
-                            url: "resultsServer.php",
-                            dataType: "json",
-                            data: {
-                                mode: 3,
-                                user_id: 3,
-                                comp_id: 3
-                            },
-                            type: "post",
-                            success: function(save) {
-                                alert(save);
-                            }
-
-
-                        });
-                    }
-
                 });
             }
         });

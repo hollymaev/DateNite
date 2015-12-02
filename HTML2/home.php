@@ -31,9 +31,9 @@
 <!--        <div id="sb-site">          -->
             
             <div id="blank" class="row">
-                <div class="title" id="Choose">  Choose Your  </div>
-                <div class="box" id="box1"> TIME </div>
-                <div class="box" id="box2"> BUDGET</div>
+                <div class="title" id="Choose"><p>  Choose Your  </p></div>
+                <div class="box" id="box1"><p> TIME </p></div>
+                <div class="box" id="box2"><p> BUDGET</p></div>
             </div>
             
             <div id="grey" class="row">
@@ -108,7 +108,6 @@
                 </div>
                 
                 <div class="span"id="infoResults">
-                    <button id="save">Save</button>
                 </div>
                 
             </div>
