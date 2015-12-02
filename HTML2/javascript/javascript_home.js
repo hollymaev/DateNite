@@ -76,7 +76,7 @@ window.onload = function() {
                             for (var i in company) {
 
                                 $("#background").append(
-                                    "<div class='companyinfo2'><h1>" + company[i].company + "  <i id='save' class='fa fa-star-o fa-2x'></i></h1><p class='pcompany'><h2>" + company[i].description + "</h2></div><br><div class='companyinfo'>Address: " +company[i].address+ "<br>Phone Number: " + company[i].phone + "<br>Website: <a href='" + company[i].website + "' target=_blank>" + company[i].website + "</a><br><br></p><div id='map'></div><br><button id='back'>Back</button></div>"
+                                    "<div class='companyinfo2'><h1>" + company[i].company + "  <i id='save' class='fa fa-star-o fa-2x'></i></h1><hr><p class='pcompany'><h2>" + company[i].description + "</h2></div><br><div class='companyinfo'>Address: " +company[i].address+ "<br>Phone Number: " + company[i].phone + "<br>Website: <a href='" + company[i].website + "' target=_blank>" + company[i].website + "</a><br><br></p><div id='map'></div><br><button id='back'>Back</button></div>"
                                 );
                                 
                                 //Calling the initMap function

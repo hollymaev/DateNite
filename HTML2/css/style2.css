@@ -84,6 +84,13 @@ h2{
         margin-top:130%; 
     }
 
+    .timeicon1:hover{
+        -webkit-box-shadow: 90px 9px 123px 68px rgba(222,84,204,0.11);8
+        -moz-box-shadow: 9px 9px 123px 68px rgba(222,84,204,0.11);
+        box-shadow: 9px 9px 123px 68px rgba(222,84,204,0.11);
+        border-radius: 50%;
+    }
+
     .timeicon2{
         width: 70%;
         height: auto;
@@ -92,16 +99,37 @@ h2{
         margin-right: 10%;
     }
 
+    .timeicon2:hover{
+        -webkit-box-shadow: 9px 9px 123px 68px rgba(222,84,204,0.11);
+        -moz-box-shadow: 9px 9px 123px 68px rgba(222,84,204,0.11);
+        box-shadow: 9px 9px 123px 68px rgba(222,84,204,0.11);
+        border-radius: 50%;
+    }
+
     .timeicon3{
         width: 80%;
         height: auto;
         margin-top:170%; 
     }
 
+    .timeicon3:hover{
+        -webkit-box-shadow: 9px 9px 123px 68px rgba(222,84,204,0.11);
+        -moz-box-shadow: 9px 9px 123px 68px rgba(222,84,204,0.11);
+        box-shadow: 9px 9px 123px 68px rgba(222,84,204,0.11);
+        border-radius: 50%;
+    }
+
     .timeicon4{
         width: 80%;
         height: auto;
         margin-top:150%;
+    }
+
+    .timeicon4:hover{
+        -webkit-box-shadow: 9px 10px 123px 68px rgba(222,84,204,0.11);
+        -moz-box-shadow: 9px 10px 123px 68px rgba(222,84,204,0.11);
+        box-shadow: 9px 10px 123px 68px rgba(222,84,204,0.11);
+        border-radius: 50%;
     }
 
     .budicon1{
@@ -111,11 +139,25 @@ h2{
         margin-left: 15%;
     }
 
+    .budicon1:hover{
+        -webkit-box-shadow: 9px 10px 123px 68px rgba(14,186,171,0.11);
+        -moz-box-shadow: 9px 10px 123px 68px rgba(14,186,171,0.11);
+        box-shadow: 9px 10px 123px 68px rgba(14,186,171,0.11);
+        border-radius: 50%;
+    }
+
     .budicon2{
         width: 80%;
         height: auto;
         margin-top:150%; 
         margin-left: 15%;
+    }
+
+    .budicon2:hover{
+        -webkit-box-shadow: 9px 10px 123px 68px rgba(14,186,171,0.11);
+        -moz-box-shadow: 9px 10px 123px 68px rgba(14,186,171,0.11);
+        box-shadow: 9px 10px 123px 68px rgba(14,186,171,0.11);
+        border-radius: 50%;
     }
 
     .budicon3{
@@ -125,6 +167,12 @@ h2{
         margin-left: 15%;
     }
 
+    .budicon3:hover{
+        -webkit-box-shadow: 9px 10px 123px 68px rgba(14,186,171,0.11);
+        -moz-box-shadow: 9px 10px 123px 68px rgba(14,186,171,0.11);
+        box-shadow: 9px 10px 123px 68px rgba(14,186,171,0.11);
+        border-radius: 50%;
+    }
 
     .box {
         top: 150px;
@@ -348,8 +396,10 @@ h2{
     #map{
         width: auto;
         height: 300px ;
-        color:black;
     }
+#map div{
+    color: black;
+}
     .homeInputs{
         position: absolute;
     }
