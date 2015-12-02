@@ -47,6 +47,7 @@ window.onload = function() {
                 for (var i in results) {
                     var newID = results[i].compID;
 
+                  
                     $("#grey").append(
 
                         "<h2>" + results[i].act_name + "</h2><div class='activity' style='background:url(" + results[i].imgSrc + ");' id='" + newID + "'><p>Location: " + results[i].city + "<br>Budget: " + results[i].price_range + "<br>Time of Day: " + results[i].time_of_day + "</p></div>");
