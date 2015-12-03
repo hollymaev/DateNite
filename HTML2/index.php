@@ -161,7 +161,7 @@
                 </form>
                 
                 <div class="row">
-                    <button id="splashSignup3" class="splashbut2">SIGNUP?</button>
+                    <button id="splashSignup3" class="splashbut2">Create An Account</button>
                 </div>
                 
             </div>
