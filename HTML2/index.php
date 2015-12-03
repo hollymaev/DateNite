@@ -114,7 +114,7 @@
                     </form>
                 
                     <div class="row">
-                        <button id="splashLogin2" class="splashbut2">LOGIN?</button>
+                        <button id="splashLogin2" class="splashbut2">Already Have An Account? Login.</button>
                     </div>
 
                     <div class="row">
