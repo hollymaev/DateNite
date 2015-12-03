@@ -21,7 +21,7 @@
                 <div class="col-xs-3 col-md-3"></div>
                 <div class="col-xs-6 col-md-6">
                     <img id="tri1" src="css/icons/triangles/tra_1.png"/>
-                    <h2> CHOOSE YOUR BUDGET </h2>
+                    <h2> CHOOSE YOUR TIME </h2>
                     <div class="circle"> </div>
                     <div class="circle"> </div>
                     <div class="circle"> </div>
@@ -33,7 +33,7 @@
                 <div class="col-xs-3 col-md-3"></div>
                 <div class="col-xs-6 col-md-6">
                     <img id="tri2" src="css/icons/triangles/tra_2-01.png"/>
-                    <h2> CHOOSE YOUR TIME </h2>
+                    <h2> CHOOSE YOUR BUDGET </h2>
                     <div class="circle"> </div>
                     <div class="circle"> </div>
                     <div class="circle"> </div>
