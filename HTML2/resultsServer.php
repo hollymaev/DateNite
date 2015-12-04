@@ -54,6 +54,7 @@ function showCompany(){
     if($result){
         while($row = mysqli_fetch_array($result)){
             $companyInfo = array(
+                "ID" => $row['ID'],
                "company" => $row['company_name'],
                 "address" => $row['address'],
                 "phone" => $row['phone_number'],
@@ -72,9 +73,10 @@ function showCompany(){
 
     function saveCompany(){
         global $con;
-        global $id;
-
-        $query = "INSERT INTO `prefs` (`user_id`,`comp_id`) VALUES ('".$id."','9')";
+        include("profile_func.php");
+        $id = $_SESSION['ID'];
+        $compID = $_POST['compid'];
+        $query = "INSERT INTO `prefs` (`user_id`,`comp_id`) VALUES ('".$id."','".$compID."')";
         $result = mysqli_query($con, $query);
 
         echo json_encode($result);
