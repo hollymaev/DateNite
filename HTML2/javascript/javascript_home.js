@@ -86,15 +86,11 @@ window.onload = function() {
                         //SAVE FUNCTION
                         var saveBut = document.getElementById('save');
                         saveBut.onclick = function() {
+    
                             console.log('WORKS');
                             $.ajax({
-                                url: "resultsServer.php",
+                                url: "saveCompany.php",
                                 dataType: "json",
-                                data: {
-                                    mode: 3,
-                                    user_id: 3,
-                                    comp_id: 3
-                                },
                                 type: "post",
                                 success: function(save) {
                                     alert(save);
