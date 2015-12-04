@@ -69,19 +69,17 @@ function showCompany(){
     echo json_encode($arrayStorage);
 }
 
-function saveCompany(){
-    global $con;
-    
-    $query = "INSERT INTO `prefs` (`user_id`,`comp_id`) VALUES ('".$_POST['user_id']."','".$_POST['comp_id']."')";
-    $result = mysqli_query($con, $query);
-    
-    if($result){
+
+    function saveCompany(){
+        global $con;
+        global $id;
+
+        $query = "INSERT INTO `prefs` (`user_id`,`comp_id`) VALUES ('".$id."','9')";
+        $result = mysqli_query($con, $query);
+
         echo json_encode($result);
-    } else{
-        echo json_encode ($result);
+
     }
-    
-}
 
 
 ?>
