@@ -18,9 +18,9 @@
                 $FName = $_SESSION['lgfn'];
                 
                 $servername = "localhost";
-                $dblogin = "datenit2_holly";
-                $dbpassword = "2425475051";
-                $dbname = "datenit2_datenite";
+                $dblogin = "root";
+                $dbpassword = "root";
+                $dbname = "datenite";
                 
                 try {
                     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $dblogin, $dbpassword);
