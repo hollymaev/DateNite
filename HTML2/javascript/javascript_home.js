@@ -42,6 +42,7 @@ window.onload = function() {
                 var results = resp;
                 //console.log(results);
                 
+                //ERIKAS PART//
                 $("#grey").append("<h1 class='resultsDesc'>Results For: "+timeInput+" and "+budgetInput+"</h1>");
                 
                 for (var i in results) {
@@ -52,8 +53,9 @@ window.onload = function() {
 
                         "<h2>" + results[i].act_name + "</h2><div class='activity' style='background:url(" + results[i].imgSrc + ");' id='" + newID + "'><p>Location: " + results[i].city + "<br>Budget: " + results[i].price_range + "<br>Time of Day: " + results[i].time_of_day + "</p></div>");
                 }
-              
-
+              //END OF ERIKAS PART//
+                
+            //MY PART//
                 $(".activity").click(function() {
                     var actID = $(this).attr("id");
 
@@ -79,24 +81,32 @@ window.onload = function() {
                                 $("#background").append(
                                     "<div class='companyinfo2'><h1>" + company[i].company + "  <i id='save' class='fa fa-star-o fa-2x'></i></h1><hr><p class='pcompany'><h2>" + company[i].description + "</h2></div><br><div class='companyinfo'>Address: " +company[i].address+ "<br>Phone Number: " + company[i].phone + "<br>Website: <a href='" + company[i].website + "' target=_blank>" + company[i].website + "</a><br><br></p><div id='map'></div><br><button id='back'>Back</button></div>"
                                 );
-                                
+                              
                                 //Calling the initMap function
                                 initMap();    
                                 
                         //SAVE FUNCTION
                         var saveBut = document.getElementById('save');
                         saveBut.onclick = function() {
-    
+                            
                             console.log('WORKS');
                             $.ajax({
-                                url: "saveCompany.php",
+                                url: "resultsServer.php",
                                 dataType: "json",
                                 type: "post",
+                                data:{
+                                    mode: 3,
+                                    compid: company[i].ID
+                                },
                                 success: function(save) {
+                                    if (save == true){
                                     alert(save);
+                                    saveBut.className = "fa fa-star fa-2x";
+                                } else{
+                                    alert("You've Already Saved This!");
+                                } 
+
                                 }
-
-
                             });
                         }
                         
