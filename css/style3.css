@@ -1,0 +1,311 @@
+/*********************** Profile Page ***********************/
+
+/********************
+******  WHOLE  ******
+*********************/
+
+html {
+    height: 100%;
+    width: 100%; 
+}
+
+div {
+    font-size: 13pt;
+    font-family: 'Gill Sans MT', sans-serif;
+    font-weight: 100;
+    color:rgb(220,220,220);
+    z-index: 5;
+}
+
+body { 
+    background-image: url('images/bg1.png');
+    margin:0;
+   	padding:0;
+   	height:100%;
+   	background-repeat: ;
+   	background-attachment: fixed;
+   	background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.p1{
+    font-size: 4em;
+}
+
+.p2{
+    font-size: 2.5em;
+    margin-bottom: 5%;
+}
+
+
+.pSe{
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 5%;
+    margin-top: 15%;
+}
+
+#save{
+    background-color: rgba(0,0,0,0); 
+    border: none;
+    color: #01BCAC;
+    float: right;
+    text-align: center;
+    display: inline-block;
+    font-size: 2.4em;
+    margin-top: 60px;
+    margin-right: 50px;
+    z-index: 50;
+    
+}
+
+/********************
+******  icons  ******
+*********************/
+
+
+.picon{
+    width: 17%;
+    height: auto;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 5%;
+    margin-bottom: 8%;
+}
+
+.fa:hover, .icon-rotate .fa:active { 
+	text-align: center;
+    display: inline-block;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+    -webkit-transform: scale(1.2) rotate(180deg);
+	-moz-transform: scale(1.2) rotate(180deg);
+	-ms-transform: scale(1.2) rotate(180deg);
+	-o-transform: scale(1.2) rotate(180deg);
+	transform: scale(1.2) rotate(180deg);
+}
+
+
+
+/********************
+******  input  ******
+*********************/
+
+.pinbox1{
+    height: 7%;
+    width: 100%;
+    margin: 0;
+    font-size: 1.8em;
+    padding-left:13%;
+    border-top-color: rgba(10, 10, 10, 0.6);
+    border-left-color: rgba(10, 10, 10, 0.6);
+    border-right-color: rgba(10, 10, 10, 0.6);
+    border-bottom-color: rgba(230, 230, 230, 0.6);
+}
+
+.pinbox2{
+    height: 7%;
+    width: 100%;
+    margin: 0;
+    font-size: 1.8em;
+    padding-left:13%;
+    border-top-color: rgba(10, 10, 10, 0.6);
+    border-left-color: rgba(10, 10, 10, 0.6);
+    border-right-color: rgba(10, 10, 10, 0.6);
+    border-bottom-color: rgba(10, 10, 10, 0.6);
+}
+
+.pin{
+    background-size: 9%;
+    background-color: rgba(10, 10, 10, 0.6);
+}
+
+.lnoti{
+    float: left;
+    margin-top: 3%;
+}
+
+.rnoti{
+    float: right;
+    padding-right:13%;
+    margin-top: 3.5%;
+}
+
+    /********************
+    ****  Noti But1  ****
+    *********************/
+
+.onoffswitch1 {
+    position: relative; 
+    width: 180px;
+    -webkit-user-select:none; 
+    -moz-user-select:none; 
+    -ms-user-select: none;
+}
+
+.onoffswitch1-checkbox {
+    display: none;
+}
+
+.onoffswitch1-label {
+    display: block; 
+    overflow: hidden; 
+    cursor: pointer;
+    border: 2px solid #FFFFF; 
+    border-radius: 10px;
+}
+
+.onoffswitch1-inner {
+    display: block; 
+    width: 200%; 
+    margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+
+.onoffswitch1-inner:before, .onoffswitch1-inner:after {
+    display: block; 
+    float: left; 
+    width: 50%; 
+    height: 65px; 
+    padding: 0; 
+    line-height: 70px;
+    font-size: 2.5em; 
+    color: white; 
+    font-family: Trebuchet, Arial, sans-serif; 
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.onoffswitch1-inner:before {
+    content: "ON";
+    padding-left: 16px;
+    background-color: rgba(50,120,180,0.5); 
+    color: rgba(230,240,250,0.8);
+    text-align: left;
+}
+
+.onoffswitch1-inner:after {
+    content: "OFF";
+    padding-right: 16px;
+    background-color: rgba(50,120,180,0.5); 
+    color: rgba(180,220,250,0.8);
+    text-align: right;
+}
+
+.onoffswitch1-switch {
+    display: block; 
+    width: 50px; 
+    margin: 7.5px;
+    background: rgba(180,220,250,0.8);
+    position: absolute; 
+    top: 0; 
+    bottom: 0;
+    right: 110px;
+    border: 2px solid #FFFFF; 
+    border-radius: 10px;
+    transition: all 0.3s ease-in 0s; 
+}
+
+.onoffswitch1-checkbox:checked + .onoffswitch1-label .onoffswitch1-inner {
+    margin-left: 0;
+}
+
+.onoffswitch1-checkbox:checked + .onoffswitch1-label .onoffswitch1-switch {
+    right: 0px; 
+    background-color: rgba(230,240,250,0.8); 
+}
+
+
+    /********************
+    ****  Noti But2  ****
+    *********************/
+
+.onoffswitch2 {
+    position: relative; 
+    width: 180px;
+    -webkit-user-select:none; 
+    -moz-user-select:none; 
+    -ms-user-select: none;
+}
+
+.onoffswitch2-checkbox {
+    display: none;
+}
+
+.onoffswitch2-label {
+    display: block; 
+    overflow: hidden; 
+    cursor: pointer;
+    border: 2px solid #FFFFF; 
+    border-radius: 10px;
+}
+
+.onoffswitch2-inner {
+    display: block;
+    width: 200%; 
+    margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+
+.onoffswitch2-inner:before, .onoffswitch2-inner:after {
+    display: block; 
+    float: left; 
+    width: 50%; 
+    height: 65px; 
+    padding: 0; 
+    line-height: 65px;
+    font-size: 2.5em; 
+    color: white; 
+    font-family: Trebuchet, Arial, sans-serif; 
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.onoffswitch2-inner:before {
+    content: "ON";
+    padding-left: 16px;
+    background-color: rgba(50,120,180,0.5); 
+    color: rgba(230,240,250,0.8);
+    text-align: left;
+}
+
+.onoffswitch2-inner:after {
+    content: "OFF";
+    padding-right: 16px;
+    background-color: rgba(50,120,180,0.5); 
+    color: rgba(200,230,250,0.8);
+    text-align: right;
+}
+
+.onoffswitch2-switch {
+    display: block; 
+    width: 50px; 
+    margin: 7.5px;
+    background: rgba(180,220,250,0.8);
+    position: absolute; 
+    top: 0; 
+    bottom: 0;
+    right: 110px;
+    border: 2px solid #FFFFF; 
+    border-radius: 10px;
+    transition: all 0.3s ease-in 0s; 
+}
+
+.onoffswitch2-checkbox:checked + .onoffswitch2-label .onoffswitch2-inner {
+    margin-left: 0;
+}
+
+.onoffswitch2-checkbox:checked + .onoffswitch2-label .onoffswitch2-switch {
+    right: 0px; 
+    background-color: rgba(230,240,250,0.8); 
+}
+
+.pnoti{
+    margin-top: 10%;
+}

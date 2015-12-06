@@ -1,0 +1,761 @@
+    @media only screen 
+      and (min-device-width: 375px) 
+      and (max-device-width: 627px) 
+      and (-webkit-min-device-pixel-ratio: 3)
+      and (orientation: portrait) {}
+    html {
+        height: 100%;
+        width: 100%;
+    } 
+
+    body {
+        height: 100%;
+        width: 100%; 
+    }
+
+h1{
+    text-align: center;
+    font-size: 80pt;
+    font-family: 'Gill Sans MT', sans-serif;
+    font-weight:200;
+    color: #fff;
+    z-index: 5;
+}
+
+.s {
+    text-align: center;
+    font-size: 60pt;
+    font-family: 'Gill Sans MT', sans-serif;
+    font-weight: 100;
+    color:#fff;
+    z-index: 5;
+}
+
+h2{
+    text-align: center;
+    color: #fff;
+    font-family: 'Gill Sans MT', sans-serif;
+}
+    h3{
+        text-align: center;
+        font-size: 20pt;
+        font-family: 'Gill Sans MT', sans-serif;
+        font-weight: 100;
+        color:#fff;
+        z-index: 5;
+    } 
+
+    div {
+        font-size: 18pt;
+        font-family: 'Gill Sans', sans-serif;
+        font-weight: 100;
+        color:#fff;
+    } 
+
+    #left{
+        text-align: left;
+        font-size: 30pt;
+        font-family: 'Gill Sans MT', sans-serif;
+        font-weight: 100;
+        color:#fff;
+        z-index: 5;
+    } 
+
+    #right{
+        text-align: right;
+        font-size: 30pt;
+        font-family: 'Gill Sans MT', sans-serif;
+        font-weight: 100;
+        color:#fff;
+        z-index: 5;
+    } 
+
+
+    #blank {
+        height:375px;
+    } 
+
+    #header {
+        width:102%;
+        height:200px;
+        background-color: #24292E;
+    } 
+.sb-toggle-left{
+    z-index: 8675309;
+}
+#grey {
+    background-color: rgba(0, 0, 0, 0.2);
+    width:100%;
+    height: 60vh;
+    margin-right: auto;
+    margin-left: auto;
+} 
+
+    #optLine{
+        position:absolute;
+        z-index: 0;
+        margin-right: 25%;
+        margin-left: 25%;
+        margin-top: -10%;
+        width: 50%;
+        height: 63vh;
+    }
+
+    .timeicon1{
+    width: 100%;
+    height: auto;
+    transition: 0.2s all;
+    vertical-align: middle;
+    margin-left: 50%;
+}
+
+    .timeicon1:hover{
+        -webkit-box-shadow: 90px 9px 123px 68px rgba(222,84,204,0.2);
+        -moz-box-shadow: 9px 9px 123px 68px rgba(222,84,204,0.2);
+        box-shadow: 9px 9px 123px 68px rgba(222,84,204,0.2);
+        border-radius: 50%;
+    }
+
+.timeicon2{
+    width: 80%;
+    height: auto;
+    vertical-align: middle;
+    transition: 0.2s all;
+    margin-left:50%;
+    margin-bottom:40px;;
+}
+
+   .timeicon2:hover{
+        -webkit-box-shadow: 9px 9px 123px 68px rgba(222,84,204,0.2);
+        -moz-box-shadow: 9px 9px 123px 68px rgba(222,84,204,0.2);
+        box-shadow: 9px 9px 123px 68px rgba(222,84,204,0.2);
+        border-radius: 50%;
+    }
+
+.timeicon3{
+    width: 80%;
+    height: 50px;
+    transition: 0.2s all;
+    margin-left:50%;
+}
+
+    .timeicon3:hover{
+        -webkit-box-shadow: 9px 9px 123px 68px rgba(222,84,204,0.2);
+        -moz-box-shadow: 9px 9px 123px 68px rgba(222,84,204,0.2);
+        box-shadow: 9px 9px 123px 68px rgba(222,84,204,0.2);
+        border-radius: 50%;
+    }
+
+
+
+.timeicon4{
+    width: 85%;
+    height: auto;
+    transition: 0.2s all;
+    margin-left: 50%;
+}
+
+   .timeicon4:hover{
+        -webkit-box-shadow: 9px 10px 123px 68px rgba(222,84,204,0.2);
+        -moz-box-shadow: 9px 10px 123px 68px rgba(222,84,204,0.2);
+        box-shadow: 9px 10px 123px 68px rgba(222,84,204,0.2);
+        border-radius: 50%;
+    }
+
+.budicon1{
+    width: 100%;
+    height: auto;
+    transition: 0.2s all;
+    margin-left: 50px;
+    margin-top:65px;
+}
+
+    .budicon1:hover{
+        -webkit-box-shadow: 9px 10px 123px 68px rgba(14,186,171,0.2);
+        -moz-box-shadow: 9px 10px 123px 68px rgba(14,186,171,0.2);
+        box-shadow: 9px 10px 123px 68px rgba(14,186,171,0.2);
+        border-radius: 50%;
+    }
+
+
+.budicon2{
+    width: 100%;
+    height: 65px;
+    transition: 0.2s all;
+    margin-left: 50px;
+    margin-top:20px;
+}
+
+
+   .budicon2:hover{
+        -webkit-box-shadow: 9px 10px 123px 68px rgba(14,186,171,0.2);
+        -moz-box-shadow: 9px 10px 123px 68px rgba(14,186,171,0.2);
+        box-shadow: 9px 10px 123px 68px rgba(14,186,171,0.2);
+        border-radius: 50%;
+    }
+
+.budicon3{
+    width: 100%;
+    height: auto;
+    transition: 0.2s all;
+    margin-left: 50px;
+    margin-top: 40px;
+}
+
+   .budicon3:hover{
+        -webkit-box-shadow: 9px 10px 123px 68px rgba(14,186,171,0.2);
+        -moz-box-shadow: 9px 10px 123px 68px rgba(14,186,171,0.2);
+        box-shadow: 9px 10px 123px 68px rgba(14,186,171,0.2);
+        border-radius: 50%;
+    }
+
+#budget {
+	top:0;
+    display: inline-block;
+    margin:0;
+	padding: 0;
+    border:none;
+}
+
+    
+.box {
+    top: 150px;
+    width: 210px;
+    height: 100px;
+    display:block;
+    position:relative;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 2px solid #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    color: #fff;
+    font-size: 25pt;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+	padding-top: 2%;
+}
+
+#box1{
+    margin-left: 170px;
+    margin-right: 50px;
+	margin-top: -95px;
+    float:left;
+}
+
+#box2{
+    margin-right: 170px;
+    margin-left: 50px;
+	margin-top: -95px;
+    float:right;
+}
+
+    .title{
+        font-size: 2.3em;
+        padding: 25px;
+        text-align: center;
+        margin-right:5%;
+
+    }
+
+    .splashButton {
+        width: 280px;
+        padding: 15px;
+        margin-top: 15px;
+        margin-right:10%;
+        margin-left:10%;
+        display:inline-block;
+        position:relative;
+        top:80%;
+        left:12px;
+        background-color: rgba(0, 0, 0, 0.4);
+        border: solid 2px #fff;
+        cursor:pointer;
+        overflow: hidden;
+        color: #fff;
+        font-size: 25pt;
+    }
+
+
+    #background {
+        background:
+        linear-gradient(
+          rgba(0, 0, 0, 0.2), 
+          rgba(0, 0, 0, 0.2)
+        ),
+        url('images/bg1.png') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height: 100vh;
+        width: auto;
+
+    }
+
+button#goBut {
+    margin-top: 200px;
+    margin-left:24px;
+    width: 120px;
+    height:120px;
+}
+
+.go{
+    width: auto;
+    height: 160px;
+    margin-top: 35%;
+    margin-bottom: 20px;
+    display:inline-block;
+    position:absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: solid 2px #fff;
+    border-radius: 130px;
+    cursor:pointer;
+    overflow: hidden;
+    color: #fff;
+    font-size: 30pt;
+    z-index: 10;
+}
+
+
+    /*////////HEADER GRADIENT////////////*/
+    #grad1 {
+        height: 8px;
+        width:100%;
+        background: -webkit-linear-gradient(right, #683780 , #DE54CC); 
+        background: -o-linear-gradient(to right, #683780, #DE54CC);
+        background: -moz-linear-gradient(right, #683780, #DE54CC);
+        background: linear-gradient(to right, #683780, #DE54CC); 
+    }
+
+    #arrowicons {
+        z-index: 5;
+        display: none;
+        color: #fff;
+        margin-left: 20px;
+        cursor: pointer;
+    }
+
+
+    /*selectors*/
+
+    .input_hidden {
+        position: absolute;
+        left: -9999px;
+    }
+
+    .selected {
+        background-color: none;
+    }
+
+    /*///////////HOME BUTTONS PT2///////////////*/
+    label img {
+        z-index: 100;
+        cursor:pointer;
+    }
+
+    label img{
+        z-index: 100;
+        cursor: pointer;
+    }
+
+
+    /*///////////END OF BUTTONS PT2///////////*/
+
+    /*for results*/
+    #activityResults{
+        height: 500px;
+        width: 500px;   
+        z-index: 5;
+        display: none;
+
+    }
+ .activity{
+	
+    height: 275px;
+    width: 100vw;
+	margin-left: 3%;
+    z-index: 3;
+    padding-left: 50px;
+    transform: skewX(20deg);
+    cursor: pointer;
+	margin:50px;
+	box-shadow: 0px 0px 32px 5px rgba(0,0,0,0.75);
+    }
+
+#act2{
+	
+    margin-top: -20%;
+    height: 150px;
+    width: 80vw;
+	margin-left: 30%;
+    z-index: 2;
+    padding-left: 50px;
+    cursor: pointer;
+	position:absolute;
+	font-size: 25pt;
+	background: -webkit-linear-gradient(right, rgba(0,0,0,0.5) ,rgba(0,0,0,0.05)); 
+    background: -o-linear-gradient(to right,  rgba(0,0,0,0.5) , rgba(0,0,0,0.05)); 
+    background: -moz-linear-gradient(right, rgba(0,0,0,0.5) , rgba(0,0,0,0.05)); 
+    background: linear-gradient(to right,  rgba(0,0,0,0.5) , rgba(0,0,0,0.05)); 
+		
+}
+
+#head2{
+	font-size: 30pt;
+    margin-bottom:40px;
+    margin-top:40px;
+    margin-left:20px
+    text-align:left;
+	
+	}
+
+    /*/////////For result span in home.php////////*/
+    .span{
+    text-align:center;
+    font-size: 25pt;
+    }
+
+    #ResultSpan{
+    display: none;
+    }
+
+    #infoResults{
+    margin-right: auto;
+    margin-left: auto;
+    display:none;
+    width: 80vw;
+    height: 50vh;
+    background-color: dimgray;
+    }
+
+    .companyinfo{
+    padding: 50px;
+    display: block;
+    position: relative;
+    width: 80vw;
+    height: 43vh;
+    top: 40px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: rgba(0,0,0,.5);
+    color:#fff;
+    font-size: 18pt;
+    font-family: 'Gill Sans', sans-serif;
+    }
+    .companyinfo2{
+    padding: 50px;
+    display: block;
+    position: relative;
+    width: 80vw;
+    top: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: -150%;
+    background-color: rgba(0,0,0,.5);
+    color:#fff;
+    font-size: 18pt;
+    font-family: 'Gill Sans', sans-serif;
+    }
+
+    .resultsDesc{
+        text-align: center;
+        color: #fff;
+        font-size: 2.3em;
+    }
+
+    #save:hover{
+        cursor: pointer;
+    }
+    #back{
+        background-color: rgba(0,0,0,.5);
+        display: block;
+        margin-right:auto;
+        bottom: 50px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 30px;
+        padding-left: 30px;
+        font-size: 30px;
+    }
+
+#backbtnprof{
+        background-color: rgba(0,0,0,.5);
+        display: block;
+        margin-left: 8%;
+        margin-right:auto;
+        margin-top: 90%;
+        bottom: 50px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 30px;
+        padding-left: 30px;
+        font-size: 30px;
+    }
+    /*map*/
+    #map{
+        width: auto;
+        height: 300px ;
+    }
+.homeInputs{
+    position: absolute;
+}
+#map div{
+    color: black;
+}
+    .homeInputs{
+        position: absolute;
+    }
+    #logo {
+        height:180px;
+        weight:180px;
+        z-index: 5;
+
+    }
+
+#logo2 {
+    display:inline-block;
+    position:relative;
+    top:30;
+    margin-left:28%;
+    height:140px;
+    width:150px;
+    z-index: 5;
+    
+}
+
+#menu {
+    display:inline-block;
+    position:relative;
+    top:30;
+    margin-left:20px;
+    height:90px;
+    width:90px;
+}
+
+    a:link {
+        color: white;
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: white;
+        text-decoration: none;
+    }
+
+    .text {
+        font-size:35pt;
+        text-align: right;
+    }
+
+    .profilepic {
+        margin-bottom:30px;
+        width: 360px;
+        height: 360px;
+    }
+
+.side {
+    height:95px;
+    width:auto;
+    left:3%;
+    vertical-align: middle;
+    margin-bottom: 0.75em;
+    padding-right:5%;
+}
+    .activity p{
+        padding-top: 40px;
+    }
+
+/*Glow Effect*/
+
+.glowButtons button {
+	display: inline-block;
+	float: left;
+    position:relative;
+	top:55;
+    -webkit-transition: all 0.4s ease-in;
+	-moz-transition: all 0.4s ease-in;
+	-o-transition: all 0.4s ease-in;
+	transition: all 0.4s ease-in;
+    background-color: rgba(0, 0, 0, 0.02);
+	margin: 0;
+    margin-left: 40px;
+    margin-top: 50px;
+	color: #fff;
+	text-shadow: 0 1p 1px #636363;
+	text-decoration: none;
+    border:none;
+    width: 50px;
+    height:150px;
+}
+
+.glowButtons span  {
+    display:block;
+    position: absolute;
+    text-align:center;
+    vertical-align: middle;
+    font-size: 20pt;
+    width:150px;
+    margin:0;
+}
+.glowButtons img  {
+    position:absolute;
+    height:70px;
+    width:70px;
+    vertical-align:middle;
+	-webkit-transition: all 0.1s ease-in;
+	-moz-transition: all 0.1s ease-in;
+	-o-transition: all 0.1s ease-in;
+	transition: all 0.1s ease-in;
+}
+span.span1 {
+    position: absolute;
+    float: left;
+    margin-left:50px;
+    margin-top:198px;
+}
+
+span.span2 {
+    position: absolute;
+    float: left;
+    margin-left:30px;
+    margin-top:430px;
+}
+
+span.span3 {
+    position: absolute;
+    float: left;
+    margin-left:50px;
+    margin-top:633px;
+}
+
+span.span4 {
+    position: absolute;
+    float: left;
+    margin-left:50px;
+    margin-top:835px;
+}
+
+span.span5 {
+    font-size: 25pt;
+    position: absolute;
+    float: left;
+    margin-left:500px;
+    margin-top:300px;
+}
+
+span.span6 {
+    font-size: 25pt;
+    position: absolute;
+    float: left;
+    margin-left:530px;
+    margin-top:510px;
+}
+
+span.span7 {
+    font-size: 25pt;
+    position: absolute;
+    float: left;
+    margin-left:500px;
+    margin-top:740px;
+}
+
+.glowButtons img  {
+    position:relative;
+    height:80px;
+    width:80px;
+	-webkit-transition: all 0.1s ease-in;
+	-moz-transition: all 0.1s ease-in;
+	-o-transition: all 0.1s ease-in;
+	transition: all 0.1s ease-in;
+}
+
+
+.glowButtons button:focus, .glowButtons button:active, .glowButtons button.active, .glowButtons a:focus, .glowButtons a:active, .glowButtons a.active {
+	outline: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+	color: #eaeaea;
+	text-shadow: 0px 1px 7px #fff;
+}
+
+.glowButtons button:hover i, .glowButtons a:hover i
+{
+  font-size:150%;
+  margin-top:-4px;
+  margin-left:-7px;
+  
+}
+
+.glowButtons button:focus i, .glowButtons button:active i, .glowButtons button.active i, .glowButtons a:focus i, .glowButtons a:active i, .glowButtons a.active i
+{
+  font-size:150%;
+  margin-top:-4px;
+  margin-left:-7px;
+ 
+}
+
+/*Glow Effect 2*/
+
+.glowButtons2 button {
+	display: inline-block;
+	float: right;
+    position:relative;
+    -webkit-transition: all 0.4s ease-in;
+	-moz-transition: all 0.4s ease-in;
+	-o-transition: all 0.4s ease-in;
+	transition: all 0.4s ease-in;
+    background-color: rgba(0, 0, 0, 0.02);
+	margin: 0;
+    margin-left: 40px;
+    margin-top: 115px;
+	color: #fff;
+	text-shadow: 0 1p 1px #636363;
+	text-decoration: none;
+    border:none;
+    width: 50px;
+    height:135px;
+    z-index: 9999;
+}
+
+.glowButtons2 span  {
+    display:block;
+    position: absolute;
+    text-align:right;
+    vertical-align: middle;
+    font-size: 25pt;
+    width:140px;
+    margin:0;
+}
+
+.glowButtons2 img  {
+    position:relative;
+    height:80px;
+    width:80px;
+	-webkit-transition: all 0.1s ease-in;
+	-moz-transition: all 0.1s ease-in;
+	-o-transition: all 0.1s ease-in;
+	transition: all 0.1s ease-in;
+}
+
+.glowButtons2 button:focus, .glowButtons2 button:active, .glowButtons2 button.active, .glowButtons2 a:focus, .glowButtons2 a:active, .glowButtons2 a.active {
+	outline: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+	color: #eaeaea;
+	text-shadow: 0px 1px 7px #fff;
+}
+
+.glowButtons2 button:hover i, .glowButtons2 a:hover i
+{
+  font-size:150%;
+  margin-top:-4px;
+  margin-left:-7px;
+  
+}
+
+.glowButtons2 button:focus i, .glowButtons2 button:active i, .glowButtons2 button.active i, .glowButtons2 a:focus i, .glowButtons2 a:active i, .glowButtons2 a.active i
+{
+  font-size:150%;
+  margin-top:-4px;
+  margin-left:-7px;
+ 
+} 
