@@ -18,10 +18,15 @@
                 //$fname = $_SESSION['ID'];
                 
                 $servername = "localhost";
+                $dblogin = "datenit2_holly";
+                $dbpassword = "2425475051";
+                $dbname = "datenit2_datenite";
+                /*
+                $servername = "localhost";
                 $dblogin = "root";
                 $dbpassword = "root";
                 $dbname = "datenite";
-                
+                */
                 function getUsersData(){
                     global $con;
 

@@ -19,12 +19,16 @@
             $email = $_POST['email'];
             $picon = $_POST['picon'];
                 $pass = md5($pass);
-                
+                /*
                 $servername = "localhost";
                 $dblogin = "root";
                 $dbpassword = "root";
                 $dbname = "datenite";
-                
+                */
+                $servername = "localhost";
+                $dblogin = "datenit2_holly";
+                $dbpassword = "2425475051";
+                $dbname = "datenit2_datenite";
                 try {
                     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $dblogin, $dbpassword);
                     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
