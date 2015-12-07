@@ -9,6 +9,10 @@ if($_POST['mode'] == 1){
 	showCompany();	
 } else if($_POST['mode'] == 3){
     saveCompany();
+} else if($_POST['mode'] == 4){
+    showPrefs();
+} else if($_POST['mode'] == 5){
+    deletePrefs();
 }
 
 ?>

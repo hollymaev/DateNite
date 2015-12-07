@@ -73,18 +73,7 @@
         
         <div id="savedPlan" class="row">
         </div>
-                
-        <div id="savedPlan" class="row">
-        
-        </div>
-        
-        <div id="savedPlan" class="row">
-        
-        </div>
-        
-        <div id="savedPlan" class="row">
-        
-        </div>
+
                
             
     </div>
@@ -93,7 +82,7 @@
             
 <!--- script --->
     <script SRC = "http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script SRC = "javascript/javascript_home.js"></script>
+    <script SRC = "javascript/javascript_plans.js"></script>
     <script src="javascript/slidebars.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?"></script>
     <!-- this is what i add for setting button link to profile page -->

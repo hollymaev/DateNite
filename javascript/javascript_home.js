@@ -100,7 +100,7 @@ window.onload = function() {
                                 },
                                 success: function(save) {
                                     if (save == true){
-                                    alert("You Have Successfully Saved This!");
+                                    alert("You Have Successfully Saved This! Visit The 'My Plans' Page To View Your Saved Plans.");
                                     saveBut.className = "fa fa-star fa-2x";
                                 } else{
                                     alert("You've Already Saved This!");
